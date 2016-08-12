@@ -4,7 +4,7 @@ var source = mysql.createConnection({
 	port: 3306,
 	host: 'localhost',
 	user: 'root',
-	password: 'orangegit12',
+	password: '',
 	database: 'quests_db'
 });
 
