@@ -1,0 +1,83 @@
+<div class="row">
+
+	<div class="col-md-2">
+	<form class="create-update-form" action="quests/create" method="POST">
+		<h4><b>Quest</b></h4>
+		<input type="text" id="questInput" name="task">
+	</div>
+	<div class="col-md-2">
+		<h4><b>Challenge Level</b></h4>
+				<select class="form-control" id="levelSelect" name="rating">
+					<option value="common">Common +5</option>
+					<option value="tough">Tough +10</option>
+					<option value="epic">Epic +20</option>
+			</select>
+	</div>
+	<div class="col-md-2">
+		<h4><b>Type</b></h4>
+
+				<select class="form-control" id="typeSelect" name="qtype">
+					<option value="intellect">Intellect</option>
+					<option value="body">Body</option>
+					<option value="soul">Soul</option>
+				</select>
+
+	</div>
+	<div class="col-md-2">
+		<br>
+		<br>
+
+		<button id="submitBtn" class="btn btn-primary">Add Quest</button>
+
+	</div>
+	</form>
+
+</div>
+
+<div class="row">
+
+	<div class="col-md-4" id="profile">
+		<br>
+		<h3>Character Profile</h3>
+		<br>
+		<img id="profImg" src="https://pbs.twimg.com/media/BKCxYCZCEAASrhu.jpg" width="100" height="135">
+	</div>
+
+<div class="col-md-4" id="quests">
+		<br>
+		<h3>Active Quests</h3>
+
+			{{#each quests}}
+				{{#unless this.done}}
+					<br>
+					<h4><b>Task: {{this.task}}</b></h4>
+					<h5><b>Level: {{this.rating}}</b></h5>
+					<h5><b>Type: {{this.qtype}}</b></h5>
+					<form action="quests/update/{{this.id}}?_method=PUT" method="POST">
+					<input type="hidden" name="done" value="true">
+					<input type="hidden" value="{{this.qtype}}" id="taskType">
+					<button type="submit" id="doneBtn" class="btn btn-success">Done</button>
+					</form>
+
+				{{/unless}}
+			{{/each}}
+</div>
+
+<div class="col-md-4" id="doneQuests">
+	<br>
+	<h3>Completed Quests</h3>
+		<br>
+
+			{{#each quests}}
+				{{#if this.done}}
+
+						<h5><b>Complete: {{this.task}}</b></h5>
+						<h5>Rating: {{this.rating}}</h5>
+						<br>
+	
+				{{/if}}
+			{{/each}}
+
+</div>
+
+</div>
