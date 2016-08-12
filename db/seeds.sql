@@ -1,0 +1,1 @@
+INSERT INTO quests (task, rating, qtype) VALUES ('complete group project', 'epic', 'intellect');
