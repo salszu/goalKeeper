@@ -1,0 +1,23 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron {
+	background-color: #006dcc;
+	color: white;
+	height: 200px;
+	text-align: center;
+}
+
+.material-icons.md-48 { 
+	font-size: 48px; 
+}
+
+#quests {
+	text-align: center;
+}
+
+#doneQuests {
+	text-align: right;
+}
+

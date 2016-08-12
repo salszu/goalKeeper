@@ -1,0 +1,28 @@
+{
+  "name": "quest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rso136/ProjectDemo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rso136/ProjectDemo/issues"
+  },
+  "homepage": "https://github.com/rso136/ProjectDemo#readme"
+}
