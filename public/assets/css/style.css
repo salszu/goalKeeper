@@ -12,11 +12,28 @@ body {
 	text-align: center;
 }
 
+.red {
+
+  color: #F81D2D;
+  text-shadow: 1px 0px 0px #000000;
+}
+
+a:hover {
+
+  background-color: yellow;
+}
 .main {
 
   border: solid 2px white;
   box-shadow: 2px 2px 2px #000000;
 
+}
+
+.clearBtn {
+
+  background: rgba(250, 250, 250, 0);
+  color: black;
+  border: solid 1px grey;
 }
 
 .halfRule {

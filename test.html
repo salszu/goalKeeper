@@ -35,7 +35,7 @@
 
   <!--Start Of Navbar-->
 
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -52,9 +52,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Meet The Developers</a></li>
+        <li><a class="red" href="#">Home</a></li>
+        <li><a class="red" href="#">About</a></li>
+        <li><a class="red" href="#">Meet The Developers</a></li>
         <li class="dropdown">
           <ul class="dropdown-menu">
             <li><a href="#">Home</a></li>
@@ -82,10 +82,10 @@
   <div class="row">
     <div class="col-lg12 col-md-12 col-sm-12">
       <div class="mainArea text-center">
-      <img src="http://i.imgur.com/IzplgBN.png" class="img-responsive center-block">
-        <h1>Motivate Yourself</h1>
+      <img src="public/assets/img/logo.png" class="img-responsive center-block">
+    <!--     <h1>Motivate Yourself</h1> -->
         <br>
-        <button type="submit" class="btn btn-lg btn-default signUp">Sign Up</button>
+        <button type="submit" class="btn btn-lg btn-default signUp clearBtn">Sign Up</button>
       </div>
     </div>
   </div>
@@ -106,7 +106,7 @@
       
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
-      <h3>Grow &amp; Track your progress</h3>
+      <h3>Grow &amp; Track Your Progress</h3>
       <hr class="halfRule">
         <p>Feel satisfaction through completing your goals and better organizing your priorities and track your success through our leaderboards and your overall character level</p>
       </div>
@@ -152,7 +152,7 @@ $(document).ready(function() {
 (function() 
 {
     var bgCounter = 0,
-        backgrounds = [ "public/assets/img/bg.png", "public/assets/img/bg1.jpg", "public/assets/img/bg2.png", "public/assets/img/bg3.jpg"];
+        backgrounds = [ "public/assets/img/bg.png", "public/assets/img/bg2.png", "public/assets/img/bg1.jpg", "public/assets/img/bg3.jpg"];
 
     function changeBackground()
     {
