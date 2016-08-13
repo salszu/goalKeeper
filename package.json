@@ -1,5 +1,5 @@
 {
-  "name": "quest",
+  "name": "goalKeeper",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -19,10 +19,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rso136/ProjectDemo.git"
+    "url": "git+https://github.com/salszu/goalKeeper.git"
+
   },
   "bugs": {
-    "url": "https://github.com/rso136/ProjectDemo/issues"
+    "url": "https://github.com/salszu/goalKeeper/issues"
   },
-  "homepage": "https://github.com/rso136/ProjectDemo#readme"
+  "homepage": "https://github.com/salszu/goalKeeper#readme"
 }
+

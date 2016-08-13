@@ -1,13 +1,49 @@
 body {
 	font-family: 'Roboto', sans-serif;
+  /*background-image: url('../img/bg4.jpeg');*/
+
 }
 
 .jumbotron {
-	background-color: #006dcc;
-	color: white;
-	height: 200px;
+  margin-top: 150px;
+  background: rgba(250, 250, 250, 0.5);
+	color: black;
+	height: 250px;
 	text-align: center;
 }
+
+.main {
+
+  border: solid 2px white;
+  box-shadow: 2px 2px 2px #000000;
+
+}
+
+.halfRule {
+
+  width: 20%;
+  border: solid 1px black;
+}
+
+.middle {
+
+  background-color: #D3D3D3;
+  height: 450px;
+}
+
+.mainArea {
+  height: 300px;
+}
+
+.center {
+
+  text-align: center;
+}
+.signUp {
+
+
+}
+
 
 .material-icons.md-48 { 
 	font-size: 48px; 
@@ -21,3 +57,44 @@ body {
 	text-align: right;
 }
 
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+
+  .form-signin-heading,
+  .checkbox {
+    margin-bottom: 30px;
+  }
+
+  .checkbox {
+    font-weight: normal;
+  }
+
+  .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    @include box-sizing(border-box);
+
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+  input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
