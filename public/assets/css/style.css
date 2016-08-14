@@ -1,6 +1,6 @@
 body {
 	font-family: 'Roboto', sans-serif;
-  /*background-image: url('../img/bg4.jpeg');*/
+  
 
 }
 
@@ -12,16 +12,6 @@ body {
 	text-align: center;
 }
 
-.red {
-
-  color: #F81D2D;
-  text-shadow: 1px 0px 0px #000000;
-}
-
-a:hover {
-
-  background-color: yellow;
-}
 .main {
 
   border: solid 2px white;
@@ -29,27 +19,79 @@ a:hover {
 
 }
 
-.clearBtn {
+.navbar-default {
+
+  background: rgba(250, 250, 250, .8);
+  border: 0px;
+
+}
+
+.navbar-nav li {
+
+  padding-top: 7px;
+
+}
+
+a{
+
+  color: black;
+}
+
+.loginBtn {
 
   background: rgba(250, 250, 250, 0);
   color: black;
   border: solid 1px grey;
 }
 
+.loginBtn:hover {
+
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  border: solid 1px grey;
+}
+
+.navSection {
+  width: 152px;
+  display: inline-block;
+
+}
+
+.clearBtn {
+
+  background: rgba(250, 250, 250, 0);
+  color: white;
+  border: solid 1px grey;
+}
+
+.clearBtn:hover {
+
+  background-color: #65953d;
+  color: white;
+}
+
 .halfRule {
 
-  width: 20%;
+  width: 15%;
   border: solid 1px black;
 }
 
 .middle {
 
   background-color: #D3D3D3;
-  height: 450px;
-}
 
+
+}
+.test {
+  background-color: red;
+  z-index: 1000;
+}
 .mainArea {
   height: 300px;
+}
+.image-center {
+    margin: 0 auto;
+
 }
 
 .center {
@@ -115,3 +157,18 @@ a:hover {
     border-top-right-radius: 0;
   }
 }
+
+/* Fonts */
+
+h3 {
+
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+}
+
+p {
+
+
+
+}
+
