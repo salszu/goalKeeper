@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>LifeQuest</title>
     <!--Google Font CDN-->
@@ -13,30 +14,38 @@
     <link href="public/assets/css/style.css" rel="stylesheet" type="text/css">
     <!--jQuery CDN-->
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <!--Bootstrap CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!--CSS Stylesheet-->
+    <link href="public/assets/css/style.css" rel="stylesheet" type="text/css">
+    <!--Font Awesome CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <!--Firebase CDN-->
-    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js">
-    </script> 
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
 </head>
-<body>
 
-<!--Start Of Navbar-->
+<body>
+    <!--Start Of Navbar-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Toggle For Mobile Display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span> 
-                <span class="icon-bar"></span> <span class="icon-bar"></span> 
-                <span class="icon-bar"></span>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="test.html"><img alt="logo"
-                height="34" src="public/assets/img/logo2.png" width="92"></a>
+                <a class="navbar-brand" href="test.html"><img alt="logo" height="34" src="public/assets/img/logo2.png" width="92"></a>
             </div>
             <!-- Login and Signup Area -->
             <form class="navbar-form pull-right">
                 <input class="span2" placeholder="Email" type="text">
                 <input class="span2" placeholder="Password" type="password">
-                <button class="btn loginBtn btn-sm" type="submit">Login</button><br>
+                <button class="btn loginBtn btn-sm" type="submit">Login</button>
+                <br>
                 <a class="navSection" href="#">Sign Up</a> <a class="navSection" href="#">Forgot Password?</a>
             </form>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -53,19 +62,19 @@
                         </ul>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
     <div class="container">
         <div class="row">
             <div class="col-lg12 col-md-12 col-sm-12">
                 <div class="mainArea text-center">
-                    <img alt="main-logo" class="img-responsive center-block"
-                    src="public/assets/img/logo.png"> 
+                    <img alt="main-logo" class="img-responsive center-block" src="public/assets/img/logo.png">
                     <!-- <h1>Motivate Yourself</h1> -->
                     <br>
-                    <button class="btn btn-lg btn-default signUp clearBtn"
-                    type="submit">Get Started</button>
+                    <button class="btn btn-lg btn-default signUp clearBtn" type="submit">Get Started</button>
                 </div>
             </div>
         </div>
@@ -76,78 +85,106 @@
       <!--Start Of Thumbnail Row-->
         <div class="row">
         <!--Character Section-->
-            <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="thumbnail">
                <h3>Create Your Character</h3>
-                <img alt="characters" height="150" src="public/assets/img/characters2.png" width="295">
-                   <div class="caption">
+                <img alt="characters" src="public/assets/img/characters2.png" height="150" width="295">
+                  <div class="caption">
                        <p class="text-left">Sign up today and create your virtual
                        character who best represents you to help manage and accomplish
                        your goals.</p>
                        <p><a href="#" class="btn btn-primary" role="button">Add Modal Demo</a></p>
                   </div>
-                </div>
               </div>
+            </div>
       <!--Goals Section-->
-            <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="thumbnail">
               <h3>Add Your Goals</h3>
-                   <div class="caption">
-               <div class="goalBox">
-                <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i>
-                Goal: Finish English Paper</h5>
-                <div class="progress">
-                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar" role="progressbar" style="width: 50%;">
-                        50% Complete
+              <br>
+               <div class="goalBox center-block">
+                    <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i> Goal: Finish English Paper</h5>
+                    <div class="progress">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar" role="progressbar" style="width: 50%;">
+                            50% Complete
+                        </div>
                     </div>
-                </div>
-                <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i>
-                Goal: Do Laundry</h5>
-                <div class="progress">
-                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress-bar" role="progressbar" style="width: 75%;">
-                        75% Complete
+                    <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i> Goal: Do Laundry</h5>
+                    <div class="progress">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress-bar" role="progressbar" style="width: 75%;">
+                            75% Complete
+                        </div>
                     </div>
-                       
-                  </div>
-                </div>
-                  <p class="text-left">Create and manage your tasks and goals. Be
-                       able to prioritize goals and accomplish them,earning points for
-                       each completed goal.</p>
-                       <p><a href="#" class="btn btn-primary" role="button">Add Modal Demo</a></p>
-                </div>
+               </div>
+                 <div class="caption">
+                    <p class="text-left">Create and manage your tasks and goals. Be
+                    able to prioritize and accomplish them, earning points along the way.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Add Modal Demo</a></p>
+                 </div>
               </div>
-        </div>
+            </div>
         <!--Track Your Progress Section-->
-        <div class="col-lg-4 col-md-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="thumbnail">
-               <h3>Track Your Progress</h3>
-                <img alt="create" height="150" src="public/assets/img/create.png" width="150">
-                   <div class="caption">
-                       <p class="text-left">Grow your character level and internal motivation by tracking your success through our leaderboards and compare with other gamers.</p>
+               <h3>Create Your Character</h3>
+                <img alt="characters" src="public/assets/img/create2.png" height="150" width="295">
+                  <div class="caption">
+                       <p class="text-left">Grow your character level by tracking your success through our leaderboards and compare with other gamers.</p>
                        <p><a href="#" class="btn btn-primary" role="button">Add Modal Demo</a></p>
                   </div>
-                </div>
               </div>
-
-
+            </div>
         </div>
       </div>
-    </div>
-
+   </div>
     <!--Footer Section-->
     <div class="footer">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <img src="../img/todd.jpeg" alt="todd">
-                    <img src="#" alt="rich" alt="rich">
-                    <img src="#" alt="tom" alt="tom">
-                    <img src="#" alt="sal" alt="sal">
-                    <h6>2016&copy; LifeQuest All Rights Reserved</h6>
+        <div class="container-fluid text-center">
+            <h4>The Team</h4>
+            <br>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h4>Todd Germaine</h4>
+                    <img class="text-center img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="todd">
+                </div>
+                <div class="col-sm-3">
+                    <h4>Richard Oh</h4>
+                    <img class="text-center img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="richard">
+                </div>
+                <div class="col-sm-3">
+                    <h4>Sal Szurlej</h4>
+                    <img class="text-center img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="sal">
+                </div>
+                <div class="col-sm-3">
+                    <h4>Thomas Keel</h4>
+                    <img class="text-center img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="thomas">
                 </div>
             </div>
         </div>
+    	<div class="row">
+    		<div class="col-sm-3 text-center">
+    			<a href="https://github.com/tg7" target="_blank">
+					<img src="public/assets/img/github.png" alt="github">
+		  		</a>
+    		</div>
+    		<div class="col-sm-3 text-center">
+    			<a href="https://github.com/rso136" target="_blank">
+					<img src="public/assets/img/github.png" alt="github">
+		  		</a>
+    		</div>
+    		<div class="col-sm-3 text-center">
+    			<a href="https://github.com/salszu" target="_blank">
+					<img src="public/assets/img/github.png" alt="github">
+		  		</a>
+    		</div>
+    		<div class="col-sm-3 text-center">
+    			<a href="https://github.com/ThomK1429" target="_blank">
+					<img src="public/assets/img/github.png" alt="github">
+		  		</a>
+    		</div>
+    	</div>
     </div>
+
     <!--For Modal <div class="container">
 <div class="wrapper">
 <form class="form-signin"> <h2 class="form-signin-heading">Please login</h2>
@@ -162,28 +199,24 @@
     <!-- Latest compiled and minified Bootstrap JavaScript -->
     <script type="text/javascript">
     $(document).ready(function() {
-    
-    var bgCounter = 0,
-        backgrounds = [ "public/assets/img/bg.png", "public/assets/img/bg2.png", "public/assets/img/bg1.jpg", "public/assets/img/bg3.jpg"];
 
-    function changeBackground()
-    {
-        bgCounter = (bgCounter+1) % backgrounds.length;
-        $('body').css('background', '#000 url('+backgrounds[bgCounter]+') no-repeat');
-        $('body').css('background-size', '100% 60%');
-        $('body').css('background-repeat', 'no-repeat');
+        var bgCounter = 0,
+            backgrounds = ["public/assets/img/bg.png", "public/assets/img/bg2.png", "public/assets/img/bg1.jpg", "public/assets/img/bg3.jpg"];
 
-    
-        setTimeout(changeBackground, 10000);
-    }
-    changeBackground();
+        function changeBackground() {
+            bgCounter = (bgCounter + 1) % backgrounds.length;
+            $('body').css('background', '#000 url(' + backgrounds[bgCounter] + ') no-repeat');
+            $('body').css('background-size', '100% 60%');
+            $('body').css('background-repeat', 'no-repeat');
 
-     });
 
+            setTimeout(changeBackground, 10000);
+        }
+        changeBackground();
+
+    });
     </script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
+
 </html>
