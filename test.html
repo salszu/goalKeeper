@@ -29,6 +29,7 @@
 
 <body>
     <!--Start Of Navbar-->
+  <div class="top">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Toggle For Mobile Display -->
@@ -50,11 +51,9 @@
             </form>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#learn">How It Works</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li class="dropdown">
                         <ul class="dropdown-menu">
-                            <li><a href="#">How It Works</a></li>
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Contact Us</a></li>
                             <li class="divider" role="separator"></li>
@@ -67,11 +66,10 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <div class="container">
         <div class="row">
             <div class="col-lg12 col-md-12 col-sm-12">
-                <div class="mainArea text-center">
-                    <img alt="main-logo" class="img-responsive center-block" src="public/assets/img/logo.png">
+                <div class="mainArea text-center" id="main">
+                    <img alt="main-logo" class="img-responsive center-block downward" src="public/assets/img/logo.png">
                     <!-- <h1>Motivate Yourself</h1> -->
                     <br>
                     <button class="btn btn-lg btn-default signUp clearBtn" type="submit">Get Started</button>
@@ -81,6 +79,10 @@
     </div>
 
     <div class="text-center middle">
+      <div class="row middleBanner center-block">
+        <h2><i class="glyphicon glyphicon-equalizer"></i> How It Works <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+      </div>
+
       <div class="container">
       <!--Start Of Thumbnail Row-->
         <div class="row">
@@ -205,9 +207,10 @@
 
         function changeBackground() {
             bgCounter = (bgCounter + 1) % backgrounds.length;
-            $('body').css('background', '#000 url(' + backgrounds[bgCounter] + ') no-repeat');
-            $('body').css('background-size', '100% 60%');
-            $('body').css('background-repeat', 'no-repeat');
+            $('.top').css('background', '#000 url(' + backgrounds[bgCounter] + ') no-repeat');
+            $('.top').css('background-size', '100% 100%');
+            // $('.top').css('max-width', '865px');
+            $('.top').css('background-repeat', 'no-repeat');
 
 
             setTimeout(changeBackground, 10000);
