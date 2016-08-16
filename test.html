@@ -4,6 +4,16 @@
 <head>
     <title>LifeQuest</title>
     <!--Google Font CDN-->
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'><!--Bootstrap CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    rel="stylesheet">
+    <!--Font Awesome CDN-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    rel="stylesheet">
+    <!--CSS Stylesheet-->
+    <link href="public/assets/css/style.css" rel="stylesheet" type="text/css">
+    <!--jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <!--Bootstrap CDN-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -12,11 +22,9 @@
     <!--Font Awesome CDN-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <!--jQuery CDN-->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript">
-    </script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <!--Firebase CDN-->
-    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js">
-    </script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
 </head>
 
 <body>
@@ -71,64 +79,85 @@
             </div>
         </div>
     </div>
+
     <div class="text-center middle">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <h3>Create Your Character</h3>
-                    <p class="text-left">Sign up today and create your virtual character who best represents you to help manage and accomplish your goals.</p><img alt="characters" height="150" src="public/assets/img/characters2.png" width="295">
-                    <!--  <hr class="halfRule"> -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <h3>Add Your Goals</h3>
-                    <p class="text-left">Create and manage your tasks and goals. Be able to prioritize goals and accomplish them,earning points for each completed goal.</p>
-                    <br>
-                    <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i>
-                Goal: Finish English Paper</h5>
+      <div class="container">
+      <!--Start Of Thumbnail Row-->
+        <div class="row">
+        <!--Character Section-->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="thumbnail">
+               <h3>Create Your Character</h3>
+                <img alt="characters" src="public/assets/img/characters2.png" height="150" width="295">
+                  <div class="caption">
+                       <p class="text-left">Sign up today and create your virtual
+                       character who best represents you to help manage and accomplish
+                       your goals.</p>
+                       <p><a href="#" class="btn btn-primary" role="button">Add Modal Demo</a></p>
+                  </div>
+              </div>
+            </div>
+      <!--Goals Section-->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="thumbnail">
+              <h3>Add Your Goals</h3>
+              <br>
+               <div class="goalBox center-block">
+                    <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i> Goal: Finish English Paper</h5>
                     <div class="progress">
                         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar" role="progressbar" style="width: 50%;">
                             50% Complete
                         </div>
                     </div>
-                    <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i>
-                Goal: Do Laundry</h5>
+                    <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i> Goal: Do Laundry</h5>
                     <div class="progress">
                         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress-bar" role="progressbar" style="width: 75%;">
                             75% Complete
                         </div>
                     </div>
-                    <!--    <hr class="halfRule"> -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <h3>Track Your Progress</h3>
-                    <p class="text-left">Grow your character level and internal motivation by tracking your success through our leaderboards and compare with other gamers.</p>
-                    <img alt="create" height="150" src="public/assets/img/create.png" width="150">
-                    <!--   <hr class="halfRule"> -->
-                </div>
+               </div>
+                 <div class="caption">
+                    <p class="text-left">Create and manage your tasks and goals. Be
+                    able to prioritize and accomplish them, earning points along the way.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Add Modal Demo</a></p>
+                 </div>
+              </div>
+            </div>
+        <!--Track Your Progress Section-->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="thumbnail">
+               <h3>Create Your Character</h3>
+                <img alt="characters" src="public/assets/img/create2.png" height="150" width="295">
+                  <div class="caption">
+                       <p class="text-left">Grow your character level by tracking your success through our leaderboards and compare with other gamers.</p>
+                       <p><a href="#" class="btn btn-primary" role="button">Add Modal Demo</a></p>
+                  </div>
+              </div>
             </div>
         </div>
-    </div>
+      </div>
+   </div>
     <!--Footer Section-->
     <div class="footer">
         <div class="container-fluid text-center">
-            <h3>The Team</h3>
+            <h4>The Team</h4>
             <br>
             <div class="row">
                 <div class="col-sm-3">
-                    <h3>Todd Germaine</h3>
-                    <img class="text-center" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" class="img-responsive" style="width:45%" alt="Image">
+                    <h4>Todd Germaine</h4>
+                    <img class="text-center img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="todd">
                 </div>
                 <div class="col-sm-3">
-                    <h3>Richard Oh</h3>
-                    <img class="text-center" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" class="img-responsive" style="width:45%" alt="Image">
+                    <h4>Richard Oh</h4>
+                    <img class="text-center img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="richard">
                 </div>
                 <div class="col-sm-3">
-                    <h3>Sal Szurlej</h3>
-                    <img class="text-center" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" class="img-responsive" style="width:45%" alt="Image">
+                    <h4>Sal Szurlej</h4>
+                    <img class="text-center img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="sal">
                 </div>
                 <div class="col-sm-3">
-                    <h3>Thomas Keel</h3>
-                    <img class="text-center" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" class="img-responsive" style="width:45%" alt="Image">
+                    <h4>Thomas Keel</h4>
+                    <img class="text-center img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="thomas">
                 </div>
             </div>
         </div>
