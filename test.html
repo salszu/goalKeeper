@@ -29,16 +29,10 @@
 
 <body>
     <!--Start Of Navbar-->
-  <div class="top">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Toggle For Mobile Display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="test.html"><img alt="logo" height="34" src="public/assets/img/logo2.png" width="92"></a>
             </div>
             <!-- Login and Signup Area -->
@@ -49,36 +43,24 @@
                 <br>
                 <a class="navSection" href="#">Sign Up</a> <a class="navSection" href="#">Forgot Password?</a>
             </form>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#">Contact Us</a></li>
-                    <li class="dropdown">
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Contact Us</a></li>
-                            <li class="divider" role="separator"></li>
-                            <!-- <li><a href="#">Separated link</a></li> -->
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-        <div class="row">
-            <div class="col-lg12 col-md-12 col-sm-12">
-                <div class="mainArea text-center" id="main">
-                    <img alt="main-logo" class="img-responsive center-block downward" src="public/assets/img/logo.png">
-                    <!-- <h1>Motivate Yourself</h1> -->
-                    <br>
-                    <button class="btn btn-lg btn-default signUp clearBtn" type="submit">Get Started</button>
+        <div class="row logoArea">
+            <div class="top container">
+                <div class="col-lg12 col-md-12 col-sm-12">
+                    <div class="mainArea text-center" id="main">
+                        <img alt="main-logo" class="img-responsive center-block downward" src="public/assets/img/logo.png">
+                        <!-- <h1>Motivate Yourself</h1> -->
+                        <br>
+                        <button class="btn btn-lg btn-default signUp clearBtn" type="submit">Get Started</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     <div class="text-center middle">
-      <div class="row middleBanner center-block">
+      <div class="row titleBanner center-block">
         <h2><i class="glyphicon glyphicon-equalizer"></i> How It Works <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
       </div>
 
@@ -139,14 +121,15 @@
       </div>
    </div>
     <!--Footer Section-->
-        <div class="footer">
+        <div class="footer text-center">
+        <div class="row titleBanner center-block">
+        <h2><i class="glyphicon glyphicon-equalizer"></i> The Team <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+      </div>
         <br>
-            <h2 class="text-center">The Team</h2>
-            <br>
+        <br>
             <div class="row text-center">
                 <div class="col-sm-6 col-lg-3 col-md-3">
                     <h4>Todd Germaine</h4>
-                        <img class="text-center" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="todd">
                     <br>
                     <br>
                     <a href="https://github.com/tg7" target="_blank">
@@ -155,7 +138,6 @@
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-3">
                     <h4>Richard Oh</h4>
-                    <img class="text-center" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="richard">
                     <br>
                     <br>
                     <a href="https://github.com/rso136" target="_blank">
@@ -164,7 +146,6 @@
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-3">
                     <h4>Sal Szurlej</h4>
-                    <img class="text-center" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="sal">
                     <br>
                     <br>
                      <a href="https://github.com/salszu" target="_blank">
@@ -173,7 +154,6 @@
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-3">
                     <h4>Thomas Keel</h4>
-                    <img class="text-center" src="https://placeholdit.imgix.net/~text?txtsize=23&bg=000000&txt=250%C3%97250&w=250&h=250" style="width:45%" alt="thomas">
                     <br>
                     <br>
                     <a href="https://github.com/ThomK1429" target="_blank">
@@ -207,7 +187,6 @@
             $('.top').css('background-size', '100% 100%');
             // $('.top').css('max-width', '865px');
             $('.top').css('background-repeat', 'no-repeat');
-
 
             setTimeout(changeBackground, 10000);
         }
