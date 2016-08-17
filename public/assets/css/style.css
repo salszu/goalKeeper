@@ -9,6 +9,18 @@ body {
 
 }
 
+.footer {
+
+ background: rgba(0, 0, 0, 0.28);
+
+
+}
+
+.top {
+
+  height: 450px;
+}
+
 .thumbnail {
 
   height: 350px;
@@ -208,7 +220,7 @@ a{
 h2 {
 
   font-family: 'Press Start 2P', cursive;
-  font-size: 24px;
+  font-size: 22px;
 }
 h3 {
 
@@ -221,13 +233,13 @@ h4 {
   font-family: 'Press Start 2P', cursive;
   font-size: 14px;
   color: white;
+  padding: 0px;
 }
 
 
 h6 {
 
   font-family: 'Press Start 2P', cursive;
-  color: white;
   font-family: 6px;
 
 
