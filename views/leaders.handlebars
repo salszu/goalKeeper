@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Top 5 Leaderboard</h2>
+  <p>Earn the most experience points and earn a place on our Top 5 players.</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mind</th>
+        <th>Body</th>
+        <th>Soul</th>
+        <th>Experience</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each leaders}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.mind}}</td>
+        <td>{{this.phys}}</td>
+        <td>{{this.soul}}</td>
+        <td>{{this.exp}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>

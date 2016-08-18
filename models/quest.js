@@ -16,7 +16,8 @@ var quest = {
 		orm.update('quests', objColVals, condition, function (res) {
 			cb(res);
 		});
-	}
+	},
+
 };
 
 module.exports = quest;

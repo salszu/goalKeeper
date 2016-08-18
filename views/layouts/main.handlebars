@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       	rel="stylesheet">
 
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+		<link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
@@ -29,29 +29,6 @@
 	
 		</div>
 
-		<script type="text/javascript">
 
-		    var currentURL = window.location.origin;
-
-			$.get(currentURL + '/user', function(data){
-
-				console.log(data);
-
-				$("#profImg").empty();
-				$("#profile").append("<h4>Name: " + data[0].name + "</h4>");
-				$("#profile").append("<h5><b>Level: " + data[0].level + "</b></h5>");
-				$("#profImg").attr("src", data[0].photo);
-
-				$("#profile").append("<h5>Intellect: " + data[0].mind + "</h5>");
-				$("#profile").append("<h5>Body: " + data[0].phys + "</h5>");
-				$("#profile").append("<h5>Soul: " + data[0].soul + "</h5>");
-				$('#profile').append("<h5><b>Experience: " + data[0].exp + "</h5>");
-
-				return false;
-
-			})
-
-
-		</script>
 	</body>
 </HTML>

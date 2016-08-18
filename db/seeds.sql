@@ -1,1 +1,2 @@
-INSERT INTO quests (task, rating, qtype) VALUES ('complete group project', 'epic', 'intellect');
+INSERT INTO quests (task, rating, qtype, playerID) VALUES ('group project', 20, 'intellect', 1);
+INSERT INTO players (name, mind, phys, soul, level, exp, photo) VALUES ('Glenn', 0, 0, 0, 1, 0, 'http://vignette1.wikia.nocookie.net/walkingdead/images/a/a4/Season_five_glenn_rhee.png/revision/20141103202402');

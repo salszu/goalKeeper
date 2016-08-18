@@ -19,7 +19,9 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 var routes = require('./controllers/quests_controller.js');
+var routesB = require('./controllers/players_controller.js');
 app.use('/', routes);
+app.use('/', routesB);
 
-var port = process.env.PORT || 3000;
+var port = 3000;
 app.listen(port);

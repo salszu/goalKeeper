@@ -1,29 +1,35 @@
 var express = require('express');
 var router = express.Router();
 var quest = require('../models/quest.js');
-
+var currentUser = require('../data/currentUser.js')
 var userData = require('../data/user.js')
 
 
 router.get('/', function (req, res) {
-	res.redirect('/quests');
+	res.render('creation');
 });
 
 router.get('/user', function (req, res) {
 		res.json(userData);
 })
 
-router.get('/quests', function (req, res) {
-	
-	quest.all(function (data) {
-		var hbsObject = { quests: data };
-		console.log(hbsObject);
-		res.render('index', hbsObject);
-	});
-});
+router.post('/api/newuser', function(req, res){
+
+	clearUser();
+
+	function clearUser() {
+		userData = [];
+	}
+
+	var newUser = req.body;
+
+	console.log(newUser);
+
+	userData.push(newUser);
+})
 
 router.post('/quests/create', function (req, res) {
-	quest.create(['task', 'rating', 'qtype', 'done'], [req.body.task, req.body.rating, req.body.qtype, req.body.done], function () {
+	quest.create(['task', 'rating', 'qtype', 'playerID', 'done'], [req.body.task, req.body.rating, req.body.qtype, req.body.playerID, req.body.done], function () {
 		res.redirect('/quests');
 	});
 });
@@ -33,7 +39,7 @@ router.put('/quests/update/:id', function (req, res) {
 
 	console.log('condition', condition);
 
-	quest.update({ done: req.body.done }, condition, function () {
+	quest.update({ done: req.body.done, done: true }, condition, function () {
 		res.redirect('/quests');
 	});
 });

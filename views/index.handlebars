@@ -8,9 +8,9 @@
 	<div class="col-md-2">
 		<h4><b>Challenge Level</b></h4>
 				<select class="form-control" id="levelSelect" name="rating">
-					<option value="common">Common +5</option>
-					<option value="tough">Tough +10</option>
-					<option value="epic">Epic +20</option>
+					<option value="5">Common +5</option>
+					<option value="10">Tough +10</option>
+					<option value="20">Epic +20</option>
 			</select>
 	</div>
 	<div class="col-md-2">
@@ -26,6 +26,9 @@
 	<div class="col-md-2">
 		<br>
 		<br>
+		<!--<input type="hidden" id="idSelect" name="playerID" value="2">-->
+		
+		<input type="hidden" value="{{playerID}}" name="playerID">
 
 		<button id="submitBtn" class="btn btn-primary">Add Quest</button>
 
@@ -41,26 +44,47 @@
 		<h3>Character Profile</h3>
 		<br>
 		<img id="profImg" src="https://pbs.twimg.com/media/BKCxYCZCEAASrhu.jpg" width="100" height="135">
+		{{#each quests}}
+			{{#if @last}}
+		<h4 type="hidden" id="photoVal">{{this.photo}}</h4>	
+		<h4><b>Name: {{this.name}}</b></h4>
+		<h5><b>Level: {{this.level}}</b></h5>
+		<h5>Intellect: {{this.mind}}</h5>
+		<h5>Body: {{this.phys}}</h5>
+		<h5>Soul: {{this.soul}}</h5>
+		<h5><b>Experience: {{this.exp}}</b></h5>
+			{{/if}}
+		{{/each}}
+
 	</div>
 
 <div class="col-md-4" id="quests">
 		<br>
 		<h3>Active Quests</h3>
-
+			<div id="questsCol">
 			{{#each quests}}
 				{{#unless this.done}}
 					<br>
 					<h4><b>Task: {{this.task}}</b></h4>
-					<h5><b>Level: {{this.rating}}</b></h5>
+					<h5><b>Points: +{{this.rating}}</b></h5>
 					<h5><b>Type: {{this.qtype}}</b></h5>
-					<form action="quests/update/{{this.id}}?_method=PUT" method="POST">
+					<!--<form action="quests/update/{{this.id}}?_method=PUT" method="POST">
+					<form action="quests/stats/{{this.playerID}}?_method=PUT" method="POST">-->
+					<div>
 					<input type="hidden" name="done" value="true">
-					<input type="hidden" value="{{this.qtype}}" id="taskType">
-					<button type="submit" id="doneBtn" class="btn btn-success">Done</button>
+					<input type="hidden" value={{this.level}} class="lvlType">
+					<input type="hidden" value={{this.exp}} class="expType">
+					<input type="hidden" value={{this.rating}} class="rateType">
+					<input type="hidden" value={{this.playerID}} class="playeridType">
+					<input type="hidden" value={{this.id}} class="idType">
+					<input type="hidden" value={{this.qtype}} class="taskType">
+					<button type="submit" data-id="{{this.id}}" class="done-btn">Done</button>
+					</div>
 					</form>
 
 				{{/unless}}
 			{{/each}}
+			</div>
 </div>
 
 <div class="col-md-4" id="doneQuests">
@@ -81,3 +105,156 @@
 </div>
 
 </div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	var plyrPhoto = $('#photoVal').text();
+
+	$('#profImg').empty();
+	$('#profImg').attr("src", plyrPhoto);
+	$('#photoVal').empty();
+
+	var currentURL = window.location.origin;
+
+
+	$.put = function(url, data, callback, type){
+ 
+  		if ( $.isFunction(data) ){
+    		type = type || callback,
+    		callback = data,
+    		data = {}
+  		}
+ 
+  		return $.ajax({
+    		url: url,
+    		type: 'PUT',
+    		success: callback,
+    		data: data,
+    		contentType: type
+  		});
+	}
+
+//	$.get(currentURL + '/user', function(data){
+//
+//			console.log(data);
+//
+//			$("#profImg").empty();
+//			$("#profImg").attr("src", data[0].photo);
+//
+//			return false;
+//
+//			})
+
+			$('.done-btn').on('click', function(){
+				
+				var exp = $(this).siblings(".expType").val().trim();
+				var task = $(this).siblings(".taskType").val().trim();
+				var id = $(this).attr('data-id');
+				var plyrID = $(this).siblings(".playeridType").val().trim();
+				var rating = $(this).siblings(".rateType").val().trim();
+				var plyrLvl = $(this).siblings(".lvlType").val().trim();
+				console.log(Math.floor(exp / 100) + 1);
+
+				console.log(task);
+				console.log(id);
+				console.log(plyrID);
+				console.log(rating);
+
+
+
+				function levelUp() {
+					var result = (Math.floor(exp / 100) + 1);
+					console.log(plyrLvl + " " + result); 
+
+					if (plyrLvl != result) {
+						console.log("Level update");
+
+						$.put('/quests/levelup/' + plyrID, function(data){
+							console.log(data);
+						})
+					}
+				}
+
+				levelUp();
+
+				//activating intellect upgrade routes	
+				if (task == "intellect" && rating == 5) {		
+
+					$.put('/quests/statsM1/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+
+				if (task == "intellect" && rating == 10) {		
+
+					$.put('/quests/statsM2/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+					
+				if (task == "intellect" && rating == 20) {		
+
+					$.put('/quests/statsM3/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+
+
+				//activating body upgrade routes
+				if (task == "body" && rating == 5) {
+
+					$.put('/quests/statsB1/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+
+				if (task == "body" && rating == 10) {
+
+					$.put('/quests/statsB2/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+
+				if (task == "body" && rating == 20) {
+
+					$.put('/quests/statsB3/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+
+
+				//activating soul upgrade routes
+				if (task == "soul" && rating == 5) {
+
+					$.put('/quests/statsS1/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+
+				if (task == "soul" && rating == 10) {
+
+					$.put('/quests/statsS2/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+
+				if (task == "soul" && rating == 20) {
+
+					$.put('/quests/statsS3/' + plyrID, function(data){
+						console.log(data);
+					})
+				}
+
+
+				//updating quest complete route
+				$.put('/quests/update/' + id, function(data) {
+					console.log(data);
+				})
+				
+				location.reload();
+			})
+});
+
+</script>
