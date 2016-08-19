@@ -70,7 +70,7 @@ var orm = {
 		var queryString = 'UPDATE ' + table;
 
 		queryString = queryString + ' SET ';
-		queryString = queryString + columnA + ' = ' + columnB + increment;
+		queryString = queryString + columnA + ' = ' + columnB + " + " + increment;
 		queryString = queryString + ' WHERE ';
 		queryString = queryString + condition;
 

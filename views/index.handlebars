@@ -26,7 +26,6 @@
 	<div class="col-md-2">
 		<br>
 		<br>
-		<!--<input type="hidden" id="idSelect" name="playerID" value="2">-->
 		
 		<input type="hidden" value="{{playerID}}" name="playerID">
 
@@ -43,7 +42,7 @@
 		<br>
 		<h3>Character Profile</h3>
 		<br>
-		<img id="profImg" src="https://pbs.twimg.com/media/BKCxYCZCEAASrhu.jpg" width="100" height="135">
+		<img id="profImg" src="http://www.colorcombos.com/images/colors/FFFFFF.png" width="100" height="135">
 		{{#each quests}}
 			{{#if @last}}
 		<h4 type="hidden" id="photoVal">{{this.photo}}</h4>	
@@ -68,8 +67,7 @@
 					<h4><b>Task: {{this.task}}</b></h4>
 					<h5><b>Points: +{{this.rating}}</b></h5>
 					<h5><b>Type: {{this.qtype}}</b></h5>
-					<!--<form action="quests/update/{{this.id}}?_method=PUT" method="POST">
-					<form action="quests/stats/{{this.playerID}}?_method=PUT" method="POST">-->
+					<form action="quests/update/{{this.id}}?_method=PUT" method="POST">
 					<div>
 					<input type="hidden" name="done" value="true">
 					<input type="hidden" value={{this.level}} class="lvlType">
@@ -118,35 +116,6 @@ $(document).ready(function(){
 
 	var currentURL = window.location.origin;
 
-
-	$.put = function(url, data, callback, type){
- 
-  		if ( $.isFunction(data) ){
-    		type = type || callback,
-    		callback = data,
-    		data = {}
-  		}
- 
-  		return $.ajax({
-    		url: url,
-    		type: 'PUT',
-    		success: callback,
-    		data: data,
-    		contentType: type
-  		});
-	}
-
-//	$.get(currentURL + '/user', function(data){
-//
-//			console.log(data);
-//
-//			$("#profImg").empty();
-//			$("#profImg").attr("src", data[0].photo);
-//
-//			return false;
-//
-//			})
-
 			$('.done-btn').on('click', function(){
 				
 				var exp = $(this).siblings(".expType").val().trim();
@@ -162,8 +131,6 @@ $(document).ready(function(){
 				console.log(plyrID);
 				console.log(rating);
 
-
-
 				function levelUp() {
 					var result = (Math.floor(exp / 100) + 1);
 					console.log(plyrLvl + " " + result); 
@@ -171,7 +138,7 @@ $(document).ready(function(){
 					if (plyrLvl != result) {
 						console.log("Level update");
 
-						$.put('/quests/levelup/' + plyrID, function(data){
+						$.post('/quests/levelup/' + plyrID, function(data){
 							console.log(data);
 						})
 					}
@@ -182,21 +149,21 @@ $(document).ready(function(){
 				//activating intellect upgrade routes	
 				if (task == "intellect" && rating == 5) {		
 
-					$.put('/quests/statsM1/' + plyrID, function(data){
+					$.post('/quests/statsM1/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
 
 				if (task == "intellect" && rating == 10) {		
 
-					$.put('/quests/statsM2/' + plyrID, function(data){
+					$.post('/quests/statsM2/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
 					
 				if (task == "intellect" && rating == 20) {		
 
-					$.put('/quests/statsM3/' + plyrID, function(data){
+					$.post('/quests/statsM3/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
@@ -205,21 +172,21 @@ $(document).ready(function(){
 				//activating body upgrade routes
 				if (task == "body" && rating == 5) {
 
-					$.put('/quests/statsB1/' + plyrID, function(data){
+					$.post('/quests/statsB1/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
 
 				if (task == "body" && rating == 10) {
 
-					$.put('/quests/statsB2/' + plyrID, function(data){
+					$.post('/quests/statsB2/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
 
 				if (task == "body" && rating == 20) {
 
-					$.put('/quests/statsB3/' + plyrID, function(data){
+					$.post('/quests/statsB3/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
@@ -228,32 +195,24 @@ $(document).ready(function(){
 				//activating soul upgrade routes
 				if (task == "soul" && rating == 5) {
 
-					$.put('/quests/statsS1/' + plyrID, function(data){
+					$.post('/quests/statsS1/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
 
 				if (task == "soul" && rating == 10) {
 
-					$.put('/quests/statsS2/' + plyrID, function(data){
+					$.post('/quests/statsS2/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
 
 				if (task == "soul" && rating == 20) {
 
-					$.put('/quests/statsS3/' + plyrID, function(data){
+					$.post('/quests/statsS3/' + plyrID, function(data){
 						console.log(data);
 					})
 				}
-
-
-				//updating quest complete route
-				$.put('/quests/update/' + id, function(data) {
-					console.log(data);
-				})
-				
-				location.reload();
 			})
 });
 
