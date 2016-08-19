@@ -28,6 +28,7 @@ body {
 
 .thumbnail {
 
+  padding-top: 25px;
   height: 350px;
   border: 1px solid #000;
   margin-top: 20px;
@@ -156,9 +157,10 @@ a{
 
   text-align: center;
 }
-.signUp {
 
+.space {
 
+  padding: 15px;
 }
 
 .flipped {
@@ -255,6 +257,10 @@ h6 {
 }
 
 /* For Modal */
+.modalSpace {
+
+  padding-top: 10px;
+}
 
 /* Outer */
 .popup {
@@ -269,9 +275,10 @@ h6 {
  
 /* Inner */
 .popup-inner {
-    max-width:700px;
+    max-width:425px;
+    max-height:585px;
     width:90%;
-    padding:40px;
+    padding:30px;
     position:absolute;
     top:50%;
     left:50%;
@@ -308,4 +315,21 @@ h6 {
     transform:translate(50%, -50%) rotate(180deg);
     background:rgba(0,0,0,1);
     text-decoration:none;
+}
+
+/* Second Modal */
+
+.popup-inner-2 {
+    max-width:425px;
+    max-height:350px;
+    width:90%;
+    padding:20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
 }
