@@ -22,7 +22,7 @@ CREATE TABLE players
     soul int DEFAULT 0,
     level int DEFAULT 1,
     exp int DEFAULT 0,
-    photo varchar(200) NOT NULL,
+    photo varchar(500) NOT NULL,
     date TIMESTAMP,
     PRIMARY KEY (playerID)
 );
