@@ -1,23 +1,335 @@
 body {
-	font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.goalBox {
+  height: 130px;
+  width: 75%;
+  padding-bottom: 12px;
+
+}
+
+.footer {
+
+ background: rgba(0, 0, 0, .3);
+ padding-bottom: 20px;
+
+
+}
+.logoArea {
+
+  background-color: black;
+}
+.top {
+
+  height: 450px;
+
+}
+
+.thumbnail {
+
+  padding-top: 25px;
+  height: 350px;
+  border: 1px solid #000;
+  margin-top: 20px;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.298);
+}
+
+.thumbnail:hover {
+
+  background: rgba(250, 250, 250, 0.978);
 }
 
 .jumbotron {
-	background-color: #006dcc;
-	color: white;
-	height: 200px;
-	text-align: center;
+  margin-top: 150px;
+  background: rgba(250, 250, 250, 0.5);
+  color: black;
+  height: 250px;
+  text-align: center;
+}
+
+.main {
+
+  border: solid 2px white;
+  box-shadow: 2px 2px 2px #000000;
+
+}
+
+.navbar-default {
+
+  background: rgba(250, 250, 250, .68);
+  border: 0px;
+
+}
+
+.downward {
+
+  margin-top: 45px;
+}
+.navbar-nav li {
+
+  padding-top: 7px;
+
+}
+
+a{
+
+  color: black;
+}
+
+.loginBtn {
+
+  background: rgba(250, 250, 250, 0);
+  color: black;
+  border: solid 1px grey;
+}
+
+.loginBtn:hover {
+
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  border: solid 1px grey;
+}
+
+.navSection {
+  width: 152px;
+  display: inline-block;
+
+}
+
+.clearBtn {
+  background: rgba(101, 149, 61, 0.80);
+  color: white;
+  border: solid 1px grey;
+}
+
+.clearBtn:hover {
+
+  background: rgba(101, 149, 61, 1);
+  color: white;
+}
+
+.halfRule {
+
+  width: 15%;
+  border: solid 1px black;
+}
+
+.middle {
+
+  background-color: #D3D3D3;
+
+
+}
+
+.navbar-default {
+
+  margin-bottom: 0px;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.titleBanner {
+  background: rgba(250, 250, 250, 0.49);
+   box-shadow: 5px 2px 2px 2px rgba(0, 0, 0, 0.298);
+  padding: 20px;
+
+  /*border: 1px  #CCC solid;
+
+    box-shadow: 
+        inset 0px 11px 8px -10px #CCC,
+        inset 0px -11px 8px -10px #CCC; */
+
+}
+
+.test {
+  background-color: red;
+  z-index: 1000;
+}
+.mainArea {
+  height: 375px;
+}
+.image-center {
+    margin: 0 auto;
+
+}
+
+.center {
+
+  text-align: center;
+}
+
+.space {
+
+  padding: 15px;
+}
+
+.flipped {
+
+  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
 }
 
 .material-icons.md-48 { 
-	font-size: 48px; 
+  font-size: 48px; 
 }
 
 #quests {
-	text-align: center;
+  text-align: center;
 }
 
 #doneQuests {
-	text-align: right;
+  text-align: right;
 }
 
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+
+  .form-signin-heading,
+  .checkbox {
+    margin-bottom: 30px;
+  }
+
+  .checkbox {
+    font-weight: normal;
+  }
+
+  .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    @include box-sizing(border-box);
+
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+  input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+/* Fonts */
+
+h2 {
+
+  font-family: 'Press Start 2P', cursive;
+  font-size: 22px;
+}
+h3 {
+
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+}
+
+h4 {
+
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  padding: 0px;
+}
+
+
+h6 {
+
+  font-family: 'Press Start 2P', cursive;
+  font-family: 6px;
+
+
+
+}
+
+/* For Modal */
+.modalSpace {
+
+  padding-top: 10px;
+}
+
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,0.75);
+}
+ 
+/* Inner */
+.popup-inner {
+    max-width:425px;
+    max-height:585px;
+    width:90%;
+    padding:30px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
+}
+ 
+/* Close Button */
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+ 
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+/* Second Modal */
+
+.popup-inner-2 {
+    max-width:425px;
+    max-height:350px;
+    width:90%;
+    padding:20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
+}

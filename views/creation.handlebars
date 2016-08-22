@@ -1,16 +1,226 @@
-<div class="row">
-	<div class="col-md-8">
-			<form class = "create-update-form" action="/quests/charcreate" method="POST">
+    <!--Start Of Navbar-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Toggle For Mobile Display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="test.html"><img alt="logo" height="34" src="public/assets/img/logo2.png" width="92"></a>
+            </div>
+            <!-- Login and Signup Area -->
+            <form class="navbar-form pull-right">
+                <input class="span2" placeholder="Email" type="text" required="">
+                <input class="span2" placeholder="Password" type="password" required="">
+                <button class="btn loginBtn btn-sm" type="submit" href="/quests">Login</button>
+                <br>
+                <a class="navSection" data-popup-open="popup-1" href="#">Sign Up</a><a class="navSection" data-popup-open="popup-2" href="#">Forgot Password?</a>
+            </form>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+        <div class="row logoArea">
+            <div class="top container">
+                <div class="col-lg12 col-md-12 col-sm-12">
+                    <div class="mainArea text-center" id="main">
+                        <img alt="main-logo" class="img-responsive center-block downward" src="public/assets/img/logo.png">
+                        <!-- <h1>Motivate Yourself</h1> -->
+                        <br>
+                        <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-				<h4><b>Please enter your user name</b></h4>
-					<input type="text" id="nameInput" name="name">
-				<br>
-				<h4><b>Link to your photo</b></h4>
-					<input type="text" id="picUrl" name="photo">
-				<br>
-				<br>
-					<button id="createBtn" class="btn btn-primary">Create Player</button>
-			</form>
-	</div>		
+    <div class="text-center middle">
+      <div class="row titleBanner center-block">
+        <h2><i class="glyphicon glyphicon-equalizer"></i> How It Works <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+      </div>
+
+      <div class="container">
+      <!--Start Of Thumbnail Row-->
+        <div class="row">
+        <!--Character Section-->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="thumbnail">
+               <h3>Create Your Character</h3>
+                <img alt="characters" src="public/assets/img/characters2.png" height="150" width="295">
+                  <div class="caption">
+                       <p class="text-left">Sign up today and create your virtual
+                       character who best represents you to help manage and accomplish
+                       your goals.</p>
+                  </div>
+              </div>
+            </div>
+      <!--Goals Section-->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="thumbnail">
+              <h3>Add Your Goals</h3>
+              <br>
+               <div class="goalBox center-block">
+                    <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i> Goal: Finish English Paper</h5>
+                    <div class="progress">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar" role="progressbar" style="width: 50%;">
+                            50% Complete
+                        </div>
+                    </div>
+                    <h5 class="text-left"><i class="glyphicon glyphicon-tasks"></i> Goal: Do Laundry</h5>
+                    <div class="progress">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress-bar" role="progressbar" style="width: 75%;">
+                            75% Complete
+                        </div>
+                    </div>
+               </div>
+                 <div class="caption">
+                    <p class="text-left">Create and manage your tasks and goals. Be
+                    able to prioritize and accomplish them, earning points along the way.</p>
+                 </div>
+              </div>
+            </div>
+        <!--Track Your Progress Section-->
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="thumbnail">
+               <h3>Be Rewarded</h3>
+                <img alt="characters" src="public/assets/img/create2.png" height="150" width="295">
+                  <div class="caption">
+                       <p class="text-left">Grow your character level by tracking your success through our leaderboards and compare with other gamers.</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+   </div>
+    <!--Footer Section-->
+        <div class="footer text-center">
+        <div class="row titleBanner center-block">
+        <h2><i class="glyphicon glyphicon-equalizer"></i> The Team <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+      </div>
+        <br>
+        <br>
+            
+            <div class="row text-center">
+                <div class="col-sm-6 col-lg-3 col-md-3">
+                    <h4>Richard Oh</h4>
+                    <a href="https://github.com/rso136" target="_blank">
+                    <img class="text-center" src="public/assets/gifs/theGenius.gif" class="img-responsive"  alt="Image">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-3">
+                    <h4>Todd Germaine</h4>
+                    <a href="https://github.com/tg7" target="_blank">
+                    <img class="text-center" src="public/assets/gifs/theHero.gif" class="img-responsive"  alt="Image">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-3">
+                    <h4>Sal Szurlej</h4>
+                     <a href="https://github.com/salszu" target="_blank">
+                     <img class="text-center" src="public/assets/gifs/theGuy.gif" class="img-responsive"  alt="Image">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-3">
+                    <h4>Thomm Keel</h4>
+                    <a href="https://github.com/thomk1429" target="_blank">
+                    <img class="text-center" src="public/assets/gifs/theScientist.gif" class="img-responsive"  alt="Image">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        var bgCounter = 0,
+            backgrounds = ["public/assets/img/bg.png", "public/assets/img/bg2.png", "public/assets/img/bg1.jpg", "public/assets/img/bg3.jpg"];
+
+        function changeBackground() {
+            bgCounter = (bgCounter + 1) % backgrounds.length;
+            $('.top').css('background', '#000 url(' + backgrounds[bgCounter] + ') no-repeat');
+            $('.top').css('background-size', '100% 100%');
+            // $('.top').css('max-width', '865px');
+            $('.top').css('background-repeat', 'no-repeat');
+
+            setTimeout(changeBackground, 10000);
+        }
+        changeBackground();
+
+//Triggers modal On Click
+
+    });
+
+
+    </script>
+</body>
+
+ 
+ <!--Sign Up Modal-->
+
+<div class="popup" data-popup="popup-1">
+    <div class="popup-inner">
+
+    <div class="wrapper">
+    <form class="form-signin"> <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Sign Up <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+
+    <hr>
+    <p>Enter Your E-mail</p>
+    <!--Email-->
+    <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+    <!--Password-->
+    <p class="modalSpace">Enter Your Password</p>
+    <input type="password" class="form-control" name="password" placeholder="Password" required=""/> 
+
+    <!--UserName-->
+    <p class="modalSpace">Please enter your user name</p>
+    <input type="text" class="form-control" name="username" placeholder="Username" required="" id="nameInput" name="name">
+    <!--Link For Photo-->
+    <p class="modalSpace">Link to your photo</p>
+    <input type="text" class="form-control" name="link" placeholder="Ex: http://..jpg" required="" id="picUrl" name="photo">
+    <br>
+    <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Submit</button> 
+
+    <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
+
+    </form>
+
 </div>
+
+        <!--Inside Close-->
+        <p class="text-center space"><a data-popup-close="popup-1" href="#">Close</a></p>
+
+        <!--Outside Close-->
+        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+
+
+    </div>
+</div>
+
+<!--Forgot Password Modal-->
+
+<div class="popup" data-popup="popup-2">
+    <div class="popup-inner-2">
+
+    <div class="wrapper">
+    <form class="form-signin"> <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Forgot PW <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+
+    <hr>
+    <p>Enter Your E-mail To Retrieve Your Password</p>
+    <!--Email-->
+    <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+    <!--Password-->
+    <br>
+    <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Submit</button> 
+
+    <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
+
+    </form>
+
+</div>
+
+        <!--Inside Close-->
+        <p class="text-center space"><a data-popup-close="popup-2" href="#">Close</a></p>
+
+        <!--Outside Close-->
+        <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+
+
+    </div>
+</div>
+
+</html>
 

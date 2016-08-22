@@ -4,8 +4,8 @@ var connection = mysql.createConnection({
 	port: 3306,
 	host: 'localhost',
 	user: 'root',
-	password: 'orangegit12',
-	database: 'quests_db4'
+	password: '',
+	database: 'quests_db3'
 });
 
 connection.connect(function (err) {
@@ -17,3 +17,4 @@ connection.connect(function (err) {
 });
 
 module.exports = connection;
+
