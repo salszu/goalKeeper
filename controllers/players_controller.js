@@ -38,14 +38,15 @@ router.get('/leaders', function (req, res) {
 })
 
 //mind upgrade routes
-router.post('/quests/statsM1/:playerID', function (req, res) {
+router.post('/quests/statsM/:playerID/:rating', function (req, res) {
 	
 	console.log("update route");	
 	var condition = 'playerID = ' + req.params.playerID;
+	var increment = req.params.rating;
 	
 	var columnA = 'mind';
 	var columnB = 'mind'; 
-	var increment = 5;
+	//var increment = 5;
 	
 	player.increment(columnA, columnB, increment, condition, function () {
 		
@@ -60,65 +61,17 @@ router.post('/quests/statsM1/:playerID', function (req, res) {
 		console.log("stat updated")
 	})
 
-})
-
-router.post('/quests/statsM2/:playerID', function (req, res) {
-
-	console.log("update route");	
-	var condition = 'playerID = ' + req.params.playerID;
-	
-	var columnA = 'mind';
-	var columnB = 'mind'; 
-	var increment = 10;
-	
-	player.increment(columnA, columnB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-
-	var columnExpA = 'exp';
-	var columnExpB = 'exp';
-	
-	player.increment(columnExpA, columnExpB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-
-})
-
-
-router.post('/quests/statsM3/:playerID', function (req, res) {
-	
-	console.log("update route");	
-	var condition = 'playerID = ' + req.params.playerID;
-	
-	var columnA = 'mind';
-	var columnB = 'mind'; 
-	var increment = 20;
-	
-	player.increment(columnA, columnB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-
-	var columnExpA = 'exp';
-	var columnExpB = 'exp';
-	
-	player.increment(columnExpA, columnExpB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})	
 })
 
 //body upgrade routes
-router.post('/quests/statsB1/:playerID', function (req, res) {
+router.post('/quests/statsB/:playerID/:rating', function (req, res) {
 	
 	console.log("update route");	
 	var condition = 'playerID = ' + req.params.playerID;
-	
+	var increment = req.params.rating;
+
 	var columnA = 'phys';
 	var columnB = 'phys'; 
-	var increment = 5;
 	
 	player.increment(columnA, columnB, increment, condition, function () {
 		
@@ -134,61 +87,16 @@ router.post('/quests/statsB1/:playerID', function (req, res) {
 	})
 })
 
-router.post('/quests/statsB2/:playerID', function (req, res) {
-	
-	console.log("update route");	
-	var condition = 'playerID = ' + req.params.playerID;
-	
-	var columnA = 'phys';
-	var columnB = 'phys'; 
-	var increment = 10;
-	
-	player.increment(columnA, columnB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-
-	var columnExpA = 'exp';
-	var columnExpB = 'exp';
-	
-	player.increment(columnExpA, columnExpB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-})
-
-router.post('/quests/statsB3/:playerID', function (req, res) {
-	
-	console.log("update route");	
-	var condition = 'playerID = ' + req.params.playerID;
-	
-	var columnA = 'phys';
-	var columnB = 'phys'; 
-	var increment = 20;
-	
-	player.increment(columnA, columnB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-	
-	var columnExpA = 'exp';
-	var columnExpB = 'exp';
-	
-	player.increment(columnExpA, columnExpB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-})
 
 //soul upgrade routes
-router.post('/quests/statsS1/:playerID', function (req, res) {
+router.post('/quests/statsS/:playerID/:rating', function (req, res) {
 	
 	console.log("update route");	
 	var condition = 'playerID = ' + req.params.playerID;
 	
 	var columnA = 'soul';
 	var columnB = 'soul'; 
-	var increment = 5;
+	var increment = req.params.rating;
 	
 	player.increment(columnA, columnB, increment, condition, function () {
 		
@@ -204,52 +112,7 @@ router.post('/quests/statsS1/:playerID', function (req, res) {
 	})
 })
 
-router.post('/quests/statsS2/:playerID', function (req, res) {
-	
-	console.log("update route");	
-	var condition = 'playerID = ' + req.params.playerID;
-	
-	var columnA = 'soul';
-	var columnB = 'soul'; 
-	var increment = 10;
-	
-	player.increment(columnA, columnB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-
-	var columnExpA = 'exp';
-	var columnExpB = 'exp';
-	
-	player.increment(columnExpA, columnExpB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-})
-
-router.post('/quests/statsS3/:playerID', function (req, res) {
-	
-	console.log("update route");	
-	var condition = 'playerID = ' + req.params.playerID;
-	
-	var columnA = 'soul';
-	var columnB = 'soul'; 
-	var increment = 20;
-	
-	player.increment(columnA, columnB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-	
-	var columnExpA = 'exp';
-	var columnExpB = 'exp';
-	
-	player.increment(columnExpA, columnExpB, increment, condition, function () {
-		
-		console.log("stat updated")
-	})
-})
-
+//level up upgrade route
 router.post('/quests/levelup/:playerID', function (req, res) {
 
 	console.log("update route");	

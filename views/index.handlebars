@@ -409,73 +409,29 @@ $(document).ready(function(){
 				levelUp();
 
 				//activating intellect upgrade routes	
-				if (task == "intellect" && rating == 5) {		
+				if (task == "intellect" && rating == 5 || rating == 10 || rating == 20) {		
 
-					$.post('/quests/statsM1/' + plyrID, function(data){
+					$.post('/quests/statsM/' + plyrID + '/' + rating, function(data){
 						console.log(data);
 					})
 				}
-
-				if (task == "intellect" && rating == 10) {		
-
-					$.post('/quests/statsM2/' + plyrID, function(data){
-						console.log(data);
-					})
-				}
-					
-				if (task == "intellect" && rating == 20) {		
-
-					$.post('/quests/statsM3/' + plyrID, function(data){
-						console.log(data);
-					})
-				}
-
 
 				//activating body upgrade routes
-				if (task == "body" && rating == 5) {
+				if (task == "body" && rating == 5 || rating == 10 || rating == 20) {
 
-					$.post('/quests/statsB1/' + plyrID, function(data){
-						console.log(data);
-					})
-				}
-
-				if (task == "body" && rating == 10) {
-
-					$.post('/quests/statsB2/' + plyrID, function(data){
-						console.log(data);
-					})
-				}
-
-				if (task == "body" && rating == 20) {
-
-					$.post('/quests/statsB3/' + plyrID, function(data){
+					$.post('/quests/statsB/' + plyrID + '/' + rating, function(data){
 						console.log(data);
 					})
 				}
 
 
 				//activating soul upgrade routes
-				if (task == "soul" && rating == 5) {
+				if (task == "soul" && rating == 5 || rating == 10 || rating == 20) {
 
-					$.post('/quests/statsS1/' + plyrID, function(data){
+					$.post('/quests/statsS/' + plyrID + '/' + rating, function(data){
 						console.log(data);
 					})
 				}
-
-				if (task == "soul" && rating == 10) {
-
-					$.post('/quests/statsS2/' + plyrID, function(data){
-						console.log(data);
-					})
-				}
-
-				if (task == "soul" && rating == 20) {
-
-					$.post('/quests/statsS3/' + plyrID, function(data){
-						console.log(data);
-					})
-				}
-			})
 });
 
 </script>
