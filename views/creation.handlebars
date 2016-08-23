@@ -1,4 +1,22 @@
-    <!--Start Of Navbar-->
+<!--    <div class="row">
+    <div class="col-md-8">
+            <form class = "create-update-form" action="/quests/charcreate" method="POST">
+
+                <h4><b>Please enter your user name</b></h4>
+                    <input type="text" id="nameInput" name="name">
+                <br>
+                <h4><b>Link to your photo</b></h4>
+                    <input type="text" id="picUrl" name="photo">
+                <br>
+                <br>
+                    <button id="createBtn" class="btn btn-primary">Create Player</button>
+            </form>
+    </div>      
+</div>
+ -->
+
+
+ <!--Start Of Navbar-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Toggle For Mobile Display -->
@@ -31,7 +49,7 @@
 
     <div class="text-center middle">
       <div class="row titleBanner center-block">
-        <h2><i class="glyphicon glyphicon-equalizer"></i> How It Works <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+        <h2><i class="glyphicon glyphicon-equalizer"></i>How It Works <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
       </div>
 
       <div class="container">
@@ -136,6 +154,8 @@
             // $('.top').css('max-width', '865px');
             $('.top').css('background-repeat', 'no-repeat');
 
+            console.log('reading me');
+
             setTimeout(changeBackground, 10000);
         }
         changeBackground();
@@ -144,9 +164,7 @@
 
     });
 
-
-    </script>
-</body>
+</script>
 
  
  <!--Sign Up Modal-->

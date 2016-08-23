@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var quest = require('../models/quest.js');
-var currentUser = require('../data/currentUser.js')
-var userData = require('../data/user.js')
-
 
 router.get('/', function (req, res) {
 	res.render('creation');
