@@ -6,9 +6,9 @@
                 <a class="navbar-brand" href="/"><img alt="logo" height="34" src="/assets/img/logo2.png" width="92"></a>
             </div>
             <!-- Login and Signup Area -->
-            <form class="navbar-form pull-right">
-                <input class="span2" placeholder="Email" type="text" required="">
-                <input class="span2" placeholder="Password" type="password" required="">
+            <form class="navbar-form pull-right create-update-form" action="/quests/login" method="POST"">
+                <input class="span2" placeholder="Email" type="text" name="email" required="">
+                <input class="span2" placeholder="Password" type="password" name="password" required="">
                 <button class="btn loginBtn btn-sm" type="submit" href="/quests/charcreate">Login</button>
                 <br>
                 <a class="navSection" data-popup-open="popup-1" href="#">Sign Up</a><a class="navSection" data-popup-open="popup-2" href="#">Forgot Password?</a>
@@ -159,7 +159,7 @@
     <div class="popup-inner">
 
     <div class="wrapper">
-    <form class="form-signin"> <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Sign Up <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+    <form class="form-signin create-update-form" action="/quests/charcreate" method="POST"> <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Sign Up <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
 
     <hr>
     <p>Enter Your E-mail</p>
@@ -171,10 +171,10 @@
 
     <!--UserName-->
     <p class="modalSpace">Please enter your user name</p>
-    <input type="text" class="form-control" name="username" placeholder="Username" required="" id="nameInput" name="name">
+    <input type="text" class="form-control" name="name" placeholder="Username" required="" id="nameInput">
     <!--Link For Photo-->
     <p class="modalSpace">Link to your photo</p>
-    <input type="text" class="form-control" name="link" placeholder="Ex: http://..jpg" required="" id="picUrl" name="photo">
+    <input type="text" class="form-control" name="photo" placeholder="Ex: http://..jpg" required="" id="picUrl">
     <br>
     <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Submit</button> 
 

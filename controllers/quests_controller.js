@@ -3,11 +3,11 @@ var router = express.Router();
 var quest = require('../models/quest.js');
 
 router.get('/', function (req, res) {
-	res.render('login');
+	res.render('creation');
 });
 
 router.get('/create', function (req, res) {
-	res.render('creation');
+	res.render('characterCreate');
 } )
 
 router.post('/quests/create', function (req, res) {
