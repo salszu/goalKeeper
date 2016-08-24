@@ -3,8 +3,12 @@ var router = express.Router();
 var quest = require('../models/quest.js');
 
 router.get('/', function (req, res) {
-	res.render('creation');
+	res.render('login');
 });
+
+router.get('/create', function (req, res) {
+	res.render('creation');
+} )
 
 router.post('/quests/create', function (req, res) {
 	quest.create(['task', 'rating', 'qtype', 'playerID', 'done'], [req.body.task, req.body.rating, req.body.qtype, req.body.playerID, req.body.done], function () {

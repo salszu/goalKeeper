@@ -1,5 +1,10 @@
 body {
   font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 .goalBox {
@@ -19,6 +24,7 @@ body {
 .logoArea {
 
   background-color: black;
+  margin: 0px;
 }
 .top {
 
@@ -130,15 +136,8 @@ a{
 
 .titleBanner {
   background: rgba(250, 250, 250, 0.49);
-   box-shadow: 5px 2px 2px 2px rgba(0, 0, 0, 0.298);
+  box-shadow: 5px 2px 2px 2px rgba(0, 0, 0, 0.298);
   padding: 20px;
-
-  /*border: 1px  #CCC solid;
-
-    box-shadow: 
-        inset 0px 11px 8px -10px #CCC,
-        inset 0px -11px 8px -10px #CCC; */
-
 }
 
 .test {

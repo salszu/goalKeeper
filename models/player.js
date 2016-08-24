@@ -6,6 +6,11 @@ var player = {
 			cb(res);
 		});
 	},
+	select: function (condition, conditionB, cb) {
+		orm.select('players', condition, conditionB, function (res) {
+			cb(res);
+		})
+	},
 	update: function (objColVals, condition, cb) {
 		orm.update('players', objColVals, condition, function (res) {
 			cb(res);

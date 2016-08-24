@@ -6,7 +6,8 @@ var pID;
 
 
 router.post('/quests/charcreate', function (req, res) {
-	player.create(['name', 'photo'], [req.body.name, req.body.photo], function () {
+	
+	player.create(['name', 'photo', 'password', 'email'], [req.body.name, req.body.photo, req.body.password, req.body.email], function () {
 		console.log(req.body.name);
 		res.redirect('/quests');
 	});
@@ -18,6 +19,16 @@ router.post('/quests/charcreate', function (req, res) {
 	});
 
 });
+
+router.post('/quests/login/', function (req, res) {
+	
+	player.select(req.body.password, req.body.email, function (data) {
+		console.log(data);
+		pID = data[0].playerID;
+		console.log(pID);
+		res.redirect('/quests');
+	})
+})
 
 router.get('/quests', function (req, res) {
 	

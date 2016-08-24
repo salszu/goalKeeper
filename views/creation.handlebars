@@ -1,33 +1,15 @@
-<!--    <div class="row">
-    <div class="col-md-8">
-            <form class = "create-update-form" action="/quests/charcreate" method="POST">
-
-                <h4><b>Please enter your user name</b></h4>
-                    <input type="text" id="nameInput" name="name">
-                <br>
-                <h4><b>Link to your photo</b></h4>
-                    <input type="text" id="picUrl" name="photo">
-                <br>
-                <br>
-                    <button id="createBtn" class="btn btn-primary">Create Player</button>
-            </form>
-    </div>      
-</div>
- -->
-
-
- <!--Start Of Navbar-->
+         <!--Start Of Navbar-->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Toggle For Mobile Display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="test.html"><img alt="logo" height="34" src="public/assets/img/logo2.png" width="92"></a>
+                <a class="navbar-brand" href="/"><img alt="logo" height="34" src="/assets/img/logo2.png" width="92"></a>
             </div>
             <!-- Login and Signup Area -->
             <form class="navbar-form pull-right">
                 <input class="span2" placeholder="Email" type="text" required="">
                 <input class="span2" placeholder="Password" type="password" required="">
-                <button class="btn loginBtn btn-sm" type="submit" href="/quests">Login</button>
+                <button class="btn loginBtn btn-sm" type="submit" href="/quests/charcreate">Login</button>
                 <br>
                 <a class="navSection" data-popup-open="popup-1" href="#">Sign Up</a><a class="navSection" data-popup-open="popup-2" href="#">Forgot Password?</a>
             </form>
@@ -38,7 +20,7 @@
             <div class="top container">
                 <div class="col-lg12 col-md-12 col-sm-12">
                     <div class="mainArea text-center" id="main">
-                        <img alt="main-logo" class="img-responsive center-block downward" src="public/assets/img/logo.png">
+                        <img alt="main-logo" class="img-responsive center-block downward" src="/assets/img/logo.png">
                         <!-- <h1>Motivate Yourself</h1> -->
                         <br>
                         <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button>
@@ -49,7 +31,7 @@
 
     <div class="text-center middle">
       <div class="row titleBanner center-block">
-        <h2><i class="glyphicon glyphicon-equalizer"></i>How It Works <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+        <h2><i class="glyphicon glyphicon-equalizer"></i> How It Works <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
       </div>
 
       <div class="container">
@@ -59,7 +41,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="thumbnail">
                <h3>Create Your Character</h3>
-                <img alt="characters" src="public/assets/img/characters2.png" height="150" width="295">
+                <img alt="characters" src="/assets/img/characters2.png" height="150" width="295">
                   <div class="caption">
                        <p class="text-left">Sign up today and create your virtual
                        character who best represents you to help manage and accomplish
@@ -70,6 +52,12 @@
       <!--Goals Section-->
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="thumbnail">
+                <!-- <h3>Add Your Goals</h3>
+                <img alt="characters" src="/assets/img/goals2.png" height="150" width="295">
+                  <div class="caption">
+                       <p class="text-left">Create and manage your tasks and goals. Be
+                    able to prioritize and accomplish them, earning points along the way.</p>
+                  </div> -->
               <h3>Add Your Goals</h3>
               <br>
                <div class="goalBox center-block">
@@ -96,7 +84,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="thumbnail">
                <h3>Be Rewarded</h3>
-                <img alt="characters" src="public/assets/img/create2.png" height="150" width="295">
+                <img alt="characters" src="/assets/img/create2.png" height="150" width="295">
                   <div class="caption">
                        <p class="text-left">Grow your character level by tracking your success through our leaderboards and compare with other gamers.</p>
                   </div>
@@ -117,25 +105,25 @@
                 <div class="col-sm-6 col-lg-3 col-md-3">
                     <h4>Richard Oh</h4>
                     <a href="https://github.com/rso136" target="_blank">
-                    <img class="text-center" src="public/assets/gifs/theGenius.gif" class="img-responsive"  alt="Image">
+                    <img class="text-center" src="/assets/gifs/theGenius.gif" class="img-responsive"  alt="Image">
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-3">
                     <h4>Todd Germaine</h4>
                     <a href="https://github.com/tg7" target="_blank">
-                    <img class="text-center" src="public/assets/gifs/theHero.gif" class="img-responsive"  alt="Image">
+                    <img class="text-center" src="/assets/gifs/theHero.gif" class="img-responsive"  alt="Image">
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-3">
                     <h4>Sal Szurlej</h4>
                      <a href="https://github.com/salszu" target="_blank">
-                     <img class="text-center" src="public/assets/gifs/theGuy.gif" class="img-responsive"  alt="Image">
+                     <img class="text-center" src="/assets/gifs/theGuy.gif" class="img-responsive"  alt="Image">
                     </a>
                 </div>
                 <div class="col-sm-6 col-lg-3 col-md-3">
                     <h4>Thomm Keel</h4>
                     <a href="https://github.com/thomk1429" target="_blank">
-                    <img class="text-center" src="public/assets/gifs/theScientist.gif" class="img-responsive"  alt="Image">
+                    <img class="text-center" src="/assets/gifs/theScientist.gif" class="img-responsive"  alt="Image">
                     </a>
                 </div>
             </div>
@@ -145,7 +133,7 @@
     $(document).ready(function() {
 
         var bgCounter = 0,
-            backgrounds = ["public/assets/img/bg.png", "public/assets/img/bg2.png", "public/assets/img/bg1.jpg", "public/assets/img/bg3.jpg"];
+            backgrounds = ["/assets/img/bg.png", "/assets/img/bg2.png", "/assets/img/bg1.jpg", "/assets/img/bg3.jpg"];
 
         function changeBackground() {
             bgCounter = (bgCounter + 1) % backgrounds.length;
@@ -153,8 +141,6 @@
             $('.top').css('background-size', '100% 100%');
             // $('.top').css('max-width', '865px');
             $('.top').css('background-repeat', 'no-repeat');
-
-            console.log('reading me');
 
             setTimeout(changeBackground, 10000);
         }
@@ -240,5 +226,4 @@
     </div>
 </div>
 
-</html>
 

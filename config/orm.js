@@ -31,6 +31,21 @@ var orm = {
 			cb(result);
 		});
 	},
+
+	select: function (table, condition, conditionB, cb) {
+		var queryString = 'SELECT * FROM ' + table;
+		queryString = queryString + ' WHERE password = ';
+		queryString = queryString + "'" + condition + "'";
+		queryString = queryString + ' and email = ';
+		queryString = queryString + "'" + conditionB + "'"; 
+		
+		console.log(queryString);
+		
+		connection.query(queryString, function (err, result) {
+			if (err) throw err;
+			cb(result);
+		});
+	},
 		// vals is an array of values that we want to save to cols
 		// cols are the columns we want to insert the values into
 	create: function (table, cols, vals, cb) {
