@@ -12,12 +12,11 @@ router.post('/quests/charcreate', function (req, res) {
 		res.redirect('/quests');
 	});
 
-	player.lastValue(function (data) {
+	player.select(req.body.password, req.body.email, function (data) {
 		console.log(data);
 		pID = data[0].playerID;
 		console.log(pID);
-	});
-
+	})	
 });
 
 router.post('/quests/login/', function (req, res) {
