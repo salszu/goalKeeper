@@ -30,22 +30,15 @@ router.post('/quests/login/', function (req, res) {
 })
 
 router.get('/quests', function (req, res) {
-	
-	player.leftJoin(pID, function (data) {
-		var hbsObject = { quests: data, playerID: pID };
-		console.log(hbsObject);
-		res.render('index', hbsObject);
-	})
+    
+    player.leftJoin(pID, function (playerdata) {
+        player.leaderBoard(function (leaderdata) {
+            var hbsObject2 = { quests: playerdata, playerID: pID, leaders: leaderdata };
+            console.log(hbsObject2);
+            res.render('index', hbsObject2);
+        })
+    })
 });
-
-router.get('/leaders', function (req, res) {
-	
-	player.leaderBoard(function (data) {
-		var hbsObject2 = { leaders: data };
-		console.log(hbsObject2);
-		res.render('leaders', hbsObject2);
-	})
-})
 
 //mind upgrade routes
 router.post('/quests/statsM/:playerID/:rating', function (req, res) {

@@ -80,18 +80,18 @@
     </div>
 </div>
                    <!--Character Area-->
-  <div class="row bG">
+  <div class="row logoArea">
   <div class="container characterArea">
-    <div class="col-md-4" id="profile">
-    <img id="profImg" src="http://www.colorcombos.com/images/colors/FFFFFF.png" width="150" height="175">
+    <div class="col-md-2 col-sm-2 bG roundedCorners" id="profile">
+    <img id="profImg" src="http://www.colorcombos.com/images/colors/FFFFFF.png" width="150" height="175" class="img-responsive">
 
 
     {{#each quests}}
             {{#if @last}}
         <h4 type="hidden" id="photoVal">{{this.photo}}</h4> 
-        <h4><b>{{this.name}}</b></h4>
+        <h4 class="nameSpace"><b>{{this.name}}</b></h4>
         <h5><b>Level: {{this.level}}</b></h5>
-        <h5>Intellect: {{this.mind}}</h5>
+        <h5>Mind: {{this.mind}}</h5>
         <h5>Body: {{this.phys}}</h5>
         <h5>Soul: {{this.soul}}</h5>
         <h5><b>Experience: {{this.exp}}</b></h5>
@@ -100,12 +100,11 @@
 
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-10 col-sm-12">
     <div class="container leaders text-center">
- <form class="create-update-form" action="/leaders" method="GET">
   <h2>Top 5 Leaderboard</h2>
   <p>Earn the most experience points and earn a place on our Top 5 players.</p>
-  <table class="table table-bordered">
+  <table class="table table-bordered table-responsive">
     <thead>
       <tr>
         <th>Name</th>
@@ -127,13 +126,8 @@
     {{/each}}
     </tbody>
   </table>
- </form>
 </div>
     </div>
-
-        <div class="col-md-4">
-
-            </div>
 
         <!--Add Task Modal-->
 

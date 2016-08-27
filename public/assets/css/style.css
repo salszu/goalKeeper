@@ -19,9 +19,16 @@ th {
 
 }
 
+.roundedCorners {
+
+ border-radius: 15px;
+ 
+}
+
 .bG {
 
-  background-color: black;
+  background-color: grey;
+  padding: 15px;
 }
 .footer {
 
@@ -35,11 +42,10 @@ th {
   padding-bottom: 40px;
 }
 
-}
 .logoArea {
 
-  background-color: black;
   margin: 0px;
+  background-color: black;
 }
 .top {
 
@@ -275,6 +281,12 @@ h6 {
 
 }
 
+.nameSpace {
+
+  padding-top: 5px;
+}
+
+
 /* For Modal */
 .modalSpace {
 
@@ -378,7 +390,7 @@ h6 {
 .characterArea {
 
   padding-top: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   background-color: #D3D3D3;
 
 }
