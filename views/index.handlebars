@@ -79,18 +79,17 @@
 
     </div>
 </div>
-<!--Character Area-->
-<div class="container characterArea">
-  <div class="row">
+                   <!--Character Area-->
+  <div class="row bG">
+  <div class="container characterArea">
     <div class="col-md-4" id="profile">
-        <h3>Character Profile</h3>
-        <br>
-    <img id="profImg" src="http://www.colorcombos.com/images/colors/FFFFFF.png" width="120" height="135">
+    <img id="profImg" src="http://www.colorcombos.com/images/colors/FFFFFF.png" width="150" height="175">
+
 
     {{#each quests}}
             {{#if @last}}
         <h4 type="hidden" id="photoVal">{{this.photo}}</h4> 
-        <h4><b>Name: {{this.name}}</b></h4>
+        <h4><b>{{this.name}}</b></h4>
         <h5><b>Level: {{this.level}}</b></h5>
         <h5>Intellect: {{this.mind}}</h5>
         <h5>Body: {{this.phys}}</h5>
@@ -100,11 +99,41 @@
         {{/each}}
 
     </div>
-    <div class="col-md-4 text-center" id="info">
-        
-        <!--Add Task Modal-->
 
-        <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-3" type="submit">Add Quest</button>
+    <div class="col-md-4">
+    <div class="container leaders text-center">
+ <form class="create-update-form" action="/leaders" method="GET">
+  <h2>Top 5 Leaderboard</h2>
+  <p>Earn the most experience points and earn a place on our Top 5 players.</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mind</th>
+        <th>Body</th>
+        <th>Soul</th>
+        <th>Experience</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each leaders}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.mind}}</td>
+        <td>{{this.phys}}</td>
+        <td>{{this.soul}}</td>
+        <td>{{this.exp}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+  </table>
+ </form>
+</div>
+    </div>
+
+        <div class="col-md-4">
+
+            </div>
 
         <!--Add Task Modal-->
 
@@ -145,14 +174,13 @@
     </form>
 
 </div>
-
         <!--Inside Close-->
         <p class="text-center space"><a data-popup-close="popup-3" href="#">Close</a></p>
         <!--Outside Close-->
         <a class="popup-close" data-popup-close="popup-3" href="#">x</a>
     </div>
 </div>
-
+<!--End Of Row-->
     </div>
     <div class="col-md-4">
 
@@ -160,14 +188,19 @@
   </div>
 </div>
 
-<div class="row titleBanner center-block">
-        <h2><i class="glyphicon glyphicon-equalizer"></i> Quests <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
-      </div>
+            
+    <div class="row titleBanner center-block text-center">
+        <h2><i class="glyphicon glyphicon-equalizer"></i>  <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-3" type="submit">Add Quest</button> <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+    </div>
+
+<div class="row">
+  <div class="container text-center questZone">
 
 <div class="col-md-4" id="quests">
+<br>
+    <h3>Active Quests</h3>
         <br>
-        <h3>Active Quests</h3>
-            <div id="questsCol">
+     <div id="questsCol">
             {{#each quests}}
                 {{#unless this.done}}
                     <br>
@@ -188,24 +221,27 @@
                     </form>
                 {{/unless}}
             {{/each}}
-            </div>
+    </div>
 </div>
 
-<div class="col-md-4" id="doneQuests">
+    <div class="col-md-8" id="doneQuests">
+
     <br>
-    <h3>Completed Quests</h3>
-        <br>
-            {{#each quests}}
-                {{#if this.done}}
-                        
-                        <h5><b>Complete: {{this.task}}</b></h5>
-                        <h5>Rating: {{this.rating}}</h5>
-                        <br>
-    
-                {{/if}}
-            {{/each}}
-</div>
+        <h3>Completed Quests</h3>
+            <br>
+                {{#each quests}}
+                    {{#if this.done}}
+                            
+                            <h5><b>Complete: {{this.task}}</b></h5>
+                            <h5>Rating: {{this.rating}}</h5>
+                            <br>
+        
+                    {{/if}}
+                {{/each}}
 
+    </div>
+</div>
+</div>
 <script type="text/javascript">
 $(document).ready(function(){
     var plyrPhoto = $('#photoVal').text();

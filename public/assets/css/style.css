@@ -7,6 +7,11 @@ body {
   overflow-x: hidden;
 }
 
+th {
+
+  text-align: center;
+}
+
 .goalBox {
   height: 130px;
   width: 75%;
@@ -14,11 +19,21 @@ body {
 
 }
 
+.bG {
+
+  background-color: black;
+}
 .footer {
 
  background: rgba(0, 0, 0, .3);
  padding-bottom: 20px;
 
+ }
+
+ .questZone {
+
+  padding-bottom: 40px;
+}
 
 }
 .logoArea {
@@ -30,6 +45,11 @@ body {
 
   height: 450px;
 
+}
+
+.leaders {
+
+  width: 600px;
 }
 
 .thumbnail {
@@ -357,6 +377,8 @@ h6 {
 
 .characterArea {
 
-  margin-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  background-color: #D3D3D3;
 
 }
