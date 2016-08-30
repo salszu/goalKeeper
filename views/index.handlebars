@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container">
             <!-- Toggle For Mobile Display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="/"><img alt="logo" height="34" src="/assets/img/logo2.png" width="92"></a>
@@ -94,14 +94,15 @@
         <h5>Mind: {{this.mind}}</h5>
         <h5>Body: {{this.phys}}</h5>
         <h5>Soul: {{this.soul}}</h5>
-        <h5><b>Experience: {{this.exp}}</b></h5>
+        <h5><b>XP: {{this.exp}}</b></h5>
             {{/if}}
         {{/each}}
 
     </div>
 
-    <div class="col-md-10 col-sm-12">
-    <div class="container leaders text-center">
+
+<div class="container leaders text-center">
+    <div class="col-md-10">
   <h2>Top 5 Leaderboard</h2>
   <p>Earn the most experience points and earn a place on our Top 5 players.</p>
   <table class="table table-bordered table-responsive">
@@ -111,7 +112,7 @@
         <th>Mind</th>
         <th>Body</th>
         <th>Soul</th>
-        <th>Experience</th>
+        <th>XP</th>
       </tr>
     </thead>
     <tbody>
@@ -182,9 +183,12 @@
   </div>
 </div>
 
-            
+    <div class="container">
     <div class="row titleBanner center-block text-center">
         <h2><i class="glyphicon glyphicon-equalizer"></i>  <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-3" type="submit">Add Quest</button> <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+    </div>
+
+    <hr>
     </div>
 
 <div class="row">
@@ -236,6 +240,7 @@
     </div>
 </div>
 </div>
+
 <script type="text/javascript">
 $(document).ready(function(){
     var plyrPhoto = $('#photoVal').text();

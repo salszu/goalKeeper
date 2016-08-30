@@ -5,6 +5,7 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  background-color: white;
 }
 
 th {
@@ -22,7 +23,7 @@ th {
 .roundedCorners {
 
  border-radius: 15px;
- 
+
 }
 
 .bG {
@@ -45,7 +46,7 @@ th {
 .logoArea {
 
   margin: 0px;
-  background-color: black;
+  
 }
 .top {
 
@@ -89,8 +90,12 @@ th {
 
 .navbar-default {
 
-  background: rgba(250, 250, 250, .68);
+  background: rgba(250, 250, 250, .89);
   border: 0px;
+
+}
+
+.navbar-form {
 
 }
 
@@ -161,8 +166,8 @@ a{
 }
 
 .titleBanner {
-  background: rgba(250, 250, 250, 0.49);
-  box-shadow: 5px 2px 2px 2px rgba(0, 0, 0, 0.298);
+  background: rgba(250, 250, 250, 0.47);
+/*  box-shadow: 5px 2px 2px 2px rgba(0, 0, 0, 0.298);*/
   padding: 20px;
 }
 
@@ -392,5 +397,10 @@ h6 {
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #D3D3D3;
+
+}
+
+.table {
+
 
 }
