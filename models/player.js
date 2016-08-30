@@ -11,6 +11,11 @@ var player = {
 			cb(res);
 		})
 	},
+	authenticate: function (condition, cb) {
+		orm.authenticate('players', condition, function (res) {
+			cb(res);
+		})
+	},
 	update: function (objColVals, condition, cb) {
 		orm.update('players', objColVals, condition, function (res) {
 			cb(res);

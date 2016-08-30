@@ -10,7 +10,7 @@
                 <input class="span2" placeholder="Password" type="password" name="password" required="">
                 <button class="btn loginBtn btn-sm" type="submit" href="/quests/charcreate">Login</button>
                 <br>
-                <a class="navSection" data-popup-open="popup-1" href="#">Sign Up</a><a class="navSection" data-popup-open="popup-2" href="#">Forgot Password?</a>
+                <a class="navSection" data-popup-open="popup-1" href="#">Sign Up</a><a class="navSection" data-popup-open="popup-2" href="#">Forgot Password?</a>                
             </form>
         </div>
         <!-- /.container-fluid -->
@@ -36,6 +36,7 @@
     <input type="text" class="form-control" name="photo" placeholder="Ex: http://..jpg" required="" id="picUrl">
     <br>
     <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Submit</button> 
+    <br>
     <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
     </form>
 </div>
@@ -203,7 +204,7 @@
                 {{#unless this.done}}
                     <br>
                     <h4><b>Task: {{this.task}}</b></h4>
-                    <h5><b>Points: +{{this.rating}}</b></h5>
+                    <h5><b>Points: {{this.rating}}</b></h5>
                     <h5><b>Type: {{this.qtype}}</b></h5>
                     <form action="quests/update/{{this.id}}?_method=PUT" method="POST">
                     <div>
