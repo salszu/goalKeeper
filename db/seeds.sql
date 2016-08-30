@@ -1,2 +1,0 @@
-INSERT INTO quests (task, rating, qtype, playerID) VALUES ('group project', 20, 'intellect', 1);
-INSERT INTO players (name, mind, phys, soul, level, exp, password, email, photo) VALUES ('Glenn', 0, 0, 0, 1, 0, 'abc123', 'test@test.com', 'http://vignette1.wikia.nocookie.net/walkingdead/images/a/a4/Season_five_glenn_rhee.png/revision/20141103202402');
