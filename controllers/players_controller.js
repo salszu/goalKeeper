@@ -52,7 +52,7 @@ router.post('/quests/login', function (req, res) {
 				});	
 			}
 			else {
-				res.redirect('/create');
+				res.redirect('/');
 			}
 		})
 	})
