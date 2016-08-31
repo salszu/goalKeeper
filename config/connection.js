@@ -1,12 +1,17 @@
 var mysql = require('mysql');
 
-var connection = mysql.createConnection({
-	port: 3306,
-	host: 'localhost',
-	user: 'root',
-	password: 'orangegit12',
-	database: 'quests_db4'
-});
+var source = {
+
+	localhost: {
+		port: 3306,
+		host: 'localhost',
+		user: 'root',
+		password: 'orangegit12',
+		database: 'quests_db4'
+	}	
+}
+
+var connection = mysql.createConnection(process.env.JAWSDB_URL || source.localhost);
 
 connection.connect(function (err) {
 	if (err) {
