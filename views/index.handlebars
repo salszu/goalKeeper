@@ -16,70 +16,6 @@
         <!-- /.container-fluid -->
     </nav>
 <!--End Of Nav-->
-
-<div class="popup" data-popup="popup-1">
-    <div class="popup-inner">
-    <div class="wrapper">
-    <form class="form-signin create-update-form" action="/quests/charcreate" method="POST"> <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Sign Up <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
-    <hr>
-    <p>Enter Your E-mail</p>
-    <!--Email-->
-    <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
-    <!--Password-->
-    <p class="modalSpace">Enter Your Password</p>
-    <input type="password" class="form-control" name="password" placeholder="Password" required=""/> 
-    <!--UserName-->
-    <p class="modalSpace">Please enter your user name</p>
-    <input type="text" class="form-control" name="name" placeholder="Username" required="" id="nameInput">
-    <!--Link For Photo-->
-    <p class="modalSpace">Link to your photo</p>
-    <input type="text" class="form-control" name="photo" placeholder="Ex: http://..jpg" required="" id="picUrl">
-    <br>
-    <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Submit</button> 
-    <br>
-    <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
-    </form>
-</div>
-        <!--Inside Close-->
-        <p class="text-center space"><a data-popup-close="popup-1" href="#">Close</a></p>
-        <!--Outside Close-->
-        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
-        <!--END-->
-    </div>
-</div>
-
-
-<!--Forgot Password Modal-->
-
-<div class="popup" data-popup="popup-2">
-    <div class="popup-inner-2">
-
-    <div class="wrapper">
-    <form class="form-signin"> <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Forgot PW <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
-
-    <hr>
-    <p>Enter Your E-mail To Retrieve Your Password</p>
-    <!--Email-->
-    <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
-    <!--Password-->
-    <br>
-    <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Submit</button> 
-
-    <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
-
-    </form>
-
-</div>
-
-        <!--Inside Close-->
-        <p class="text-center space"><a data-popup-close="popup-2" href="#">Close</a></p>
-
-        <!--Outside Close-->
-        <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
-
-
-    </div>
-</div>
                    <!--Character Area-->
   <div class="row logoArea">
   <div class="container characterArea">
@@ -129,54 +65,6 @@
     </tbody>
   </table>
 </div>
-    </div>
-
-        <!--Add Task Modal-->
-
-<div class="popup" data-popup="popup-3">
-    <div class="popup-inner-3">
-    <div class="wrapper">
-    <form class="create-update-form" action="quests/create" method="POST">
-     <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Add Quest <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
-
-    <hr>
-    <p class="firstModal">Enter Your Quest</p>
-    <!--Email-->
-
-    <input type="text" class="form-control" name="task" placeholder="Enter Quest" required="" autofocus=""/>
-    <!--Challenge Level-->
-    <p class="modalSpace">Challenge Level</p>
-                <select class="form-control" id="levelSelect" name="rating">
-                    <option value="5">Common +5</option>
-                    <option value="10">Tough +10</option>
-                    <option value="20">Epic +20</option>
-                </select>
-
-    <p class="modalSpace">Type</p>
-                <select class="form-control" id="typeSelect" name="qtype">
-                    <option value="intellect">Intellect</option>
-                    <option value="body">Body</option>
-                    <option value="soul">Soul</option>
-                </select>
-
-    <br>
-    <br>
-
-    <input type="hidden" value="{{playerID}}" name="playerID">
-    <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Add Quest</button> 
-
-    <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
-
-    </form>
-
-</div>
-        <!--Inside Close-->
-        <p class="text-center space"><a data-popup-close="popup-3" href="#">Close</a></p>
-        <!--Outside Close-->
-        <a class="popup-close" data-popup-close="popup-3" href="#">x</a>
-    </div>
-</div>
-<!--End Of Row-->
     </div>
     <div class="col-md-4">
 
@@ -241,6 +129,119 @@
     </div>
 </div>
 </div>
+
+<!--Forgot Password Modal-->
+
+<div class="popup" data-popup="popup-2">
+    <div class="popup-inner-2">
+
+    <div class="wrapper">
+    <form class="form-signin"> <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Forgot PW <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+
+    <hr>
+    <p>Enter Your E-mail To Retrieve Your Password</p>
+    <!--Email-->
+    <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+    <!--Password-->
+    <br>
+    <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Submit</button> 
+
+    <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
+
+    </form>
+
+</div>
+
+        <!--Inside Close-->
+        <p class="text-center space"><a data-popup-close="popup-2" href="#">Close</a></p>
+
+        <!--Outside Close-->
+        <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+
+
+    </div>
+</div>
+
+ <!--Add Task Modal-->
+
+<div class="popup" data-popup="popup-3">
+    <div class="popup-inner-3">
+    <div class="wrapper">
+    <form class="create-update-form" action="quests/create" method="POST">
+     <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Add Quest <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+
+    <hr>
+    <p class="firstModal">Enter Your Quest</p>
+    <!--Email-->
+
+    <input type="text" class="form-control" name="task" placeholder="Enter Quest" required="" autofocus=""/>
+    <!--Challenge Level-->
+    <p class="modalSpace">Challenge Level</p>
+                <select class="form-control" id="levelSelect" name="rating">
+                    <option value="5">Common +5</option>
+                    <option value="10">Tough +10</option>
+                    <option value="20">Epic +20</option>
+                </select>
+
+    <p class="modalSpace">Type</p>
+                <select class="form-control" id="typeSelect" name="qtype">
+                    <option value="intellect">Intellect</option>
+                    <option value="body">Body</option>
+                    <option value="soul">Soul</option>
+                </select>
+
+    <br>
+    <br>
+
+    <input type="hidden" value="{{playerID}}" name="playerID">
+    <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Add Quest</button> 
+
+    <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
+
+    </form>
+
+</div>
+        <!--Inside Close-->
+        <p class="text-center space"><a data-popup-close="popup-3" href="#">Close</a></p>
+        <!--Outside Close-->
+        <a class="popup-close" data-popup-close="popup-3" href="#">x</a>
+    </div>
+</div>
+<!--End Of Row-->
+    </div>
+
+<!--Sign Up Modal-->
+<div class="popup" data-popup="popup-1">
+    <div class="popup-inner">
+    <div class="wrapper">
+    <form class="form-signin create-update-form" action="/quests/charcreate" method="POST"> <h2 class="form-signin-heading center"><i class="glyphicon glyphicon-equalizer"></i> Sign Up <i class="glyphicon glyphicon-equalizer flipped"></i></h2>
+    <hr>
+    <p>Enter Your E-mail</p>
+    <!--Email-->
+    <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+    <!--Password-->
+    <p class="modalSpace">Enter Your Password</p>
+    <input type="password" class="form-control" name="password" placeholder="Password" required=""/> 
+    <!--UserName-->
+    <p class="modalSpace">Please enter your user name</p>
+    <input type="text" class="form-control" name="name" placeholder="Username" required="" id="nameInput">
+    <!--Link For Photo-->
+    <p class="modalSpace">Link to your photo</p>
+    <input type="text" class="form-control" name="photo" placeholder="Ex: http://..jpg" required="" id="picUrl">
+    <br>
+    <button class="btn btn-lg btn-default clearBtn center-block" type="submit">Submit</button> 
+    <br>
+    <!-- <button class="btn btn-lg btn-default clearBtn" data-popup-open="popup-1" type="submit">Get Started</button> -->
+    </form>
+</div>
+        <!--Inside Close-->
+        <p class="text-center space"><a data-popup-close="popup-1" href="#">Close</a></p>
+        <!--Outside Close-->
+        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+        <!--END-->
+    </div>
+</div>
+
 
 <script type="text/javascript">
 $(document).ready(function(){
