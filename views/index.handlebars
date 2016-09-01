@@ -6,13 +6,15 @@
             </div>
             <!-- Login and Signup Area -->
             <form class="navbar-form pull-right create-update-form" action="/quests/login" method="POST"">
+                <form class="create-update-form" action="/quests/login" method="POST">
                 <input class="span2" placeholder="Email" type="text" name="email" required="">
                 <input class="span2" placeholder="Password" type="password" name="password" required="">
                 <button class="btn loginBtn btn-sm" type="submit" href="/quests/charcreate">Login</button>
                 <br>
-                <a class="navSection" data-popup-open="popup-1" href="#">Sign Up</a><a class="navSection" data-popup-open="popup-2" href="#">Forgot Password?</a>                
-            </form>
-        </div>
+                <a class="navSection" data-popup-open="popup-1" href="#">Sign Up</a>
+                <button type="button" id="logOutBtn" class="btn-link">Logout</button>  
+            </form>  
+          </div>
         <!-- /.container-fluid -->
     </nav>
 <!--End Of Nav-->
@@ -245,11 +247,21 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+
     var plyrPhoto = $('#photoVal').text();
     $('#profImg').empty();
     $('#profImg').attr("src", plyrPhoto);
     $('#photoVal').empty();
+   
     var currentURL = window.location.origin;
+
+            $('#logOutBtn').on('click', function() {
+                $.get('/logout'); 
+
+                window.location.href = '/logout';
+                console.log('Logged out')
+            })
+
             $('.done-btn').on('click', function(){
                 
                 var exp = $(this).siblings(".expType").val().trim();

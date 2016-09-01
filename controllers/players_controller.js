@@ -36,6 +36,13 @@ router.post('/quests/login', function (req, res) {
 	console.log(userpass);
 	
 	player.authenticate(email, function (data) {
+		
+		if (data == false) {
+			res.render('invalid');
+		}
+
+		else {
+
 		console.log(data[0].password)
 
 		var hash = data[0].password;
@@ -52,21 +59,41 @@ router.post('/quests/login', function (req, res) {
 				});	
 			}
 			else {
-				res.redirect('/');
+				res.render('invalid');
 			}
 		})
+
+		}
 	})
 });
 
 router.get('/quests', function (req, res) {
+
+	if (pID === null || pID === undefined) {
+		res.redirect('/');
+	}
+
+	else {
     
-    player.leftJoin(pID, function (playerdata) {
-        player.leaderBoard(function (leaderdata) {
-            var hbsObject2 = { quests: playerdata, playerID: pID, leaders: leaderdata };
-            console.log(hbsObject2);
-            res.render('index', hbsObject2);
-        })
-    })
+    	player.leftJoin(pID, function (playerdata) {
+        	player.leaderBoard(function (leaderdata) {
+            	var hbsObject2 = { quests: playerdata, playerID: pID, leaders: leaderdata };
+            	console.log(hbsObject2);
+            	res.render('index', hbsObject2);
+        	})
+    	})
+	}
+});
+
+router.get('/logout', function (req, res) {
+
+	player.select(null, null, function(data) {
+
+		pID = null;
+		console.log(pID);
+	})
+
+	res.render('logout', {layout: false});
 });
 
 //mind upgrade routes

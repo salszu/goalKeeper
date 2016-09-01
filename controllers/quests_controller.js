@@ -11,6 +11,7 @@ router.get('/create', function (req, res) {
 } )
 
 router.post('/quests/create', function (req, res) {
+
 	quest.create(['task', 'rating', 'qtype', 'playerID', 'done'], [req.body.task, req.body.rating, req.body.qtype, req.body.playerID, req.body.done], function () {
 		res.redirect('/quests');
 	});
@@ -25,6 +26,7 @@ router.put('/quests/update/:id', function (req, res) {
 	quest.update({ done: req.body.done, done: true }, condition, function () {
 		res.redirect('/quests');
 	});
+
 });
 
 module.exports = router;
