@@ -6,12 +6,13 @@
             </div>
             <!-- Login and Signup Area -->
             <form class="navbar-form pull-right create-update-form" action="/quests/login" method="POST"">
-                <form class="create-update-form" action="/quests/login" method="POST">
-                <input class="span2" placeholder="Email" type="text" name="email" required="">
-                <input class="span2" placeholder="Password" type="password" name="password" required="">
-                <button class="btn loginBtn btn-sm" type="submit" href="/quests/charcreate">Login</button>
-                <br>
-                <a class="navSection" data-popup-open="popup-1" href="#">Sign Up</a>
+
+                {{#each quests}}
+                    {{#if @last}}
+                    <p>Signed in as: <b>{{this.email}}</b></p>
+                {{/if}}
+                {{/each}}
+
                 <button type="button" id="logOutBtn" class="btn-link">Logout</button>  
             </form>  
           </div>
